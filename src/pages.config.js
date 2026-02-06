@@ -49,12 +49,14 @@
  */
 import Home from './pages/Home';
 import ChargebackWorkflows from './pages/ChargebackWorkflows';
+import FraudInvestigation from './pages/FraudInvestigation';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
     "Home": Home,
     "ChargebackWorkflows": ChargebackWorkflows,
+    "FraudInvestigation": FraudInvestigation,
 }
 
 export const pagesConfig = {
