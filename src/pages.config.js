@@ -51,6 +51,7 @@ import Home from './pages/Home';
 import ChargebackWorkflows from './pages/ChargebackWorkflows';
 import FraudInvestigation from './pages/FraudInvestigation';
 import DesignSystem from './pages/DesignSystem';
+import About from './pages/About';
 import __Layout from './Layout.jsx';
 
 
@@ -59,6 +60,7 @@ export const PAGES = {
     "ChargebackWorkflows": ChargebackWorkflows,
     "FraudInvestigation": FraudInvestigation,
     "DesignSystem": DesignSystem,
+    "About": About,
 }
 
 export const pagesConfig = {
