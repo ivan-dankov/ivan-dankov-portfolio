@@ -51,7 +51,7 @@ export default function DesignSystem() {
           "Design-engineering handoff was slow. No shared source of truth meant every feature required custom specs.",
           "New designers took weeks to get productive. No documentation, no patterns, no standards.",
         ]}
-        shiftQuote='From "every team builds their own UI from scratch" to "one system that ships consistent products faster."'
+        shiftQuote={`From "every team builds their own UI from scratch" to "one system that ships consistent products faster."`}
       />
 
       {/* What It Enabled */}
@@ -92,7 +92,7 @@ export default function DesignSystem() {
         label="Design-code sync through Storybook"
         image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80"
         caption="Components existed in both Figma and code. Storybook was the bridge."
-        text="Maintaining parity between design and code is expensive. Without it, the system drifts and teams stop trusting it. Storybook made the code the source of truth that designers could verify against."
+        text={`Maintaining parity between design and code is expensive. Without it, the system drifts and teams stop trusting it. Storybook made the code the source of truth that designers could verify against.`}
       />
 
       {/* Figma Migration - brief */}
@@ -106,7 +106,7 @@ export default function DesignSystem() {
         <div className="border-l-2 border-[#E8E8E4] pl-6">
           <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-3">Figma Migration</p>
           <p className="text-base text-[#4A4A4A] leading-relaxed">
-            The migration wasn't just a tool switch — Figma's collaborative features let us evolve the system faster and removed the file-management overhead that was slowing the team down. Completed in under 5 weeks with full team adoption.
+            The migration was not just a tool switch — Figma&apos;s collaborative features let us evolve the system faster and removed the file-management overhead that was slowing the team down. Completed in under 5 weeks with full team adoption.
           </p>
         </div>
       </motion.section>
@@ -120,7 +120,7 @@ export default function DesignSystem() {
       />
 
       <Reflection
-        text="I'd add adoption and quality metrics from day one — component coverage, usage frequency, and UI bug rates tied to system vs. non-system code. Without data, it was hard to prove the system's value beyond 'things feel faster.' I'd also establish a governance model earlier — the system outgrew the 'two designers manage it informally' approach."
+        text={`I'd add adoption and quality metrics from day one — component coverage, usage frequency, and UI bug rates tied to system vs. non-system code. Without data, it was hard to prove the system's value beyond "things feel faster." I'd also establish a governance model earlier — the system outgrew the "two designers manage it informally" approach.`}
       />
 
       <CaseNav

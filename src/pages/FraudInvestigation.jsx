@@ -35,7 +35,7 @@ export default function FraudInvestigation() {
           "The existing tools showed raw event lists. No way to see relationships between sessions, users, IPs, and locations at a glance.",
           "Analysts handled hundreds of sessions per day. Every extra click or context switch meant slower investigations and missed threats.",
         ]}
-        shiftQuote='From "scroll through events and remember what you saw" to "select sessions and see all relationships instantly."'
+        shiftQuote={`From "scroll through events and remember what you saw" to "select sessions and see all relationships instantly."`}
       />
 
       {/* Research Insight */}
@@ -60,7 +60,7 @@ export default function FraudInvestigation() {
           </div>
           <div className="md:col-span-2">
             <p className="text-base text-[#4A4A4A] leading-relaxed mb-6">
-              Customers told us they didn't need more data — they needed to see connections between data they already had. The existing table view worked for daily monitoring, but investigations required seeing relationships simultaneously.
+              Customers told us they didn&apos;t need more data — they needed to see connections between data they already had. The existing table view worked for daily monitoring, but investigations required seeing relationships simultaneously.
             </p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="bg-[#F5F5F0] rounded-xl p-4">
@@ -85,6 +85,7 @@ export default function FraudInvestigation() {
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
         caption="Table for daily monitoring and triage. Analyzer for deep investigation. Same data, different lenses."
         text="Could have tried to merge both needs into one view. Research showed the workflows are fundamentally different — forcing them together would compromise both."
+
       />
 
       <DecisionBlock
@@ -101,19 +102,19 @@ export default function FraudInvestigation() {
         label="Working prototype with Lovable"
         image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80"
         caption="Figma showed the concept. Lovable made it testable with real interaction patterns."
-        text="Most teams stop at Figma. Building a working prototype took extra time but gave customers something real to react to — and gave engineering confidence in the interaction model."
+        text={`Most teams stop at Figma. Building a working prototype took extra time but gave customers something real to react to — and gave engineering confidence in the interaction model.`}
       />
 
       <WhatIDidntBuild
         items={[
-          { label: "Graph visualization", reason: "Explored nodes-and-edges for session relationships. Doesn't scale past ~50 nodes. Analysts needed to take action directly from the view." },
-          { label: "Real-time alerting", reason: "Customers wanted notifications. Required backend infrastructure that wasn't in place. Investigation tools had to ship first." },
+          { label: "Graph visualization", reason: "Explored nodes-and-edges for session relationships. Does not scale past ~50 nodes. Analysts needed to take action directly from the view." },
+          { label: "Real-time alerting", reason: "Customers wanted notifications. Required backend infrastructure that was not in place. Investigation tools had to ship first." },
           { label: "Custom attribute ordering", reason: "Users asked to reorder columns. Kept fixed for MVP to reduce scope and test the core concept." },
         ]}
       />
 
       <Reflection
-        text="The Lovable prototype was the differentiator — it changed the conversation from 'is this feasible?' to 'when can we build this?' I'd use this approach earlier in future projects. The risk is scope creep from 4 parallel workstreams — next time I'd fight harder to sequence them."
+        text={`The Lovable prototype was the differentiator — it changed the conversation from "is this feasible?" to "when can we build this?" I'd use this approach earlier in future projects. The risk is scope creep from 4 parallel workstreams — next time I'd fight harder to sequence them.`}
       />
 
       <CaseNav

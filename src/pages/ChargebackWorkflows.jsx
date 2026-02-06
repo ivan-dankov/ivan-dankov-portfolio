@@ -32,9 +32,9 @@ export default function ChargebackWorkflows() {
         problemLines={[
           "Chargeback agents compile evidence and submit responses to payment processors under tight deadlines.",
           "The old workflow was a long template page with no validation, no progress tracking, and no preview. Completion depended on agent experience.",
-          "Result: ~50 cases/day, inconsistent quality, couldn't scale to enterprise volumes.",
+          "Result: ~50 cases/day, inconsistent quality, could not scale to enterprise volumes.",
         ]}
-        shiftQuote='From "fill out a template and hope it\'s complete" to "complete a known set of required fields and preview exactly what gets sent."'
+        shiftQuote={`From "fill out a template and hope it's complete" to "complete a known set of required fields and preview exactly what gets sent."`}
       />
 
       <DecisionBlock
@@ -42,7 +42,7 @@ export default function ChargebackWorkflows() {
         label="Templates to structured fields"
         image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80"
         caption="Every evidence field has a clear state — incomplete, enhanceable, or complete. Completion is deterministic, not guesswork."
-        text="We considered adding validation to the existing template model. I pushed for a full restructure because validation alone wouldn't make requirements visible upfront — agents would still discover problems only at submission."
+        text={`We considered adding validation to the existing template model. I pushed for a full restructure because validation alone wouldn't make requirements visible upfront — agents would still discover problems only at submission.`}
       />
 
       <DecisionBlock
@@ -50,7 +50,7 @@ export default function ChargebackWorkflows() {
         label="Dual-view architecture"
         image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80"
         caption="Left: where agents enter data. Right: exactly what the processor receives. No surprises at submission."
-        text="Could have kept a single editing view. Splitting into entry and rendered views added complexity but eliminated the gap between 'what I typed' and 'what they see.'"
+        text={`Could have kept a single editing view. Splitting into entry and rendered views added complexity but eliminated the gap between "what I typed" and "what they see."`}
         reversed
       />
 
@@ -59,7 +59,7 @@ export default function ChargebackWorkflows() {
         label="Field-level status system"
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80"
         caption="Three states per field. Agents see at a glance what's missing, what could be improved, and what's ready."
-        text="Simpler approach was binary complete/incomplete. Three states added the 'enhanceable' middle ground — fields that pass but could be stronger."
+        text={`Simpler approach was binary complete/incomplete. Three states added the "enhanceable" middle ground — fields that pass but could be stronger.`}
       />
 
       <WhatIDidntBuild
@@ -71,7 +71,7 @@ export default function ChargebackWorkflows() {
       />
 
       <Reflection
-        text="I'd push harder for analytics instrumentation from day one. We shipped without tracking field-level completion rates or time-per-section — that data would have guided which fields to auto-fill first. I'd also involve processor compliance requirements earlier to avoid a post-launch iteration."
+        text={`I'd push harder for analytics instrumentation from day one. We shipped without tracking field-level completion rates or time-per-section — that data would have guided which fields to auto-fill first. I'd also involve processor compliance requirements earlier to avoid a post-launch iteration.`}
       />
 
       <CaseNav
