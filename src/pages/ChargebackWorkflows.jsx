@@ -14,10 +14,10 @@ export default function ChargebackWorkflows() {
     <div className="min-h-screen pt-16">
       <CaseHero
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80"
-        title="Increasing agent throughput 60% by redesigning chargeback workflows"
+        title="Increasing agent throughput 140% by redesigning chargeback workflows"
         metrics={[
-          { value: "~50 to ~80", label: "Cases per day" },
-          { value: "60%", label: "Throughput increase" },
+          { value: "50 to 120", label: "Cases per day" },
+          { value: "140%", label: "Throughput increase" },
           { value: "Enterprise", label: "Alaska Airlines closed" },
         ]}
         context="Staff Product Designer · Sift — B2B fraud platform · 4 months · Sole designer"
@@ -34,7 +34,7 @@ export default function ChargebackWorkflows() {
         problemLines={[
           "Chargeback agents compile evidence and submit responses to payment processors under tight deadlines.",
           "The old workflow was a long template page with no validation, no progress tracking, and no preview. Completion depended on agent experience.",
-          "Result: ~50 cases/day, inconsistent quality, could not scale to enterprise volumes.",
+          "Result: 50 cases/day, inconsistent quality, could not scale to enterprise volumes.",
         ]}
         shiftQuote={`From "fill out a template and hope it's complete" to "complete a known set of required fields and preview exactly what gets sent."`}
       />
@@ -83,7 +83,7 @@ export default function ChargebackWorkflows() {
 
       <CaseOutcomes
         outcomes={[
-          { metric: "~50 to ~80 cases/day", description: "Agent throughput increased 60% with the new structured field system and completion tracking." },
+          { metric: "50 to 120 cases/day", description: "Agent throughput increased 140% with the new structured field system and completion tracking." },
           { metric: "Alaska Airlines closed", description: "Enterprise customer deal closed after demonstrating the scalability of the new workflow." },
           { metric: "Fewer incomplete submissions", description: "Structured fields with clear status indicators eliminated silent incomplete submissions." },
         ]}
