@@ -6,49 +6,49 @@ const toolGroups = [
   { 
     label: "Design", 
     tools: [
-      { name: "Figma", logo: "https://cdn.simpleicons.org/figma/1A1A1A" },
-      { name: "FigJam", logo: "https://cdn.simpleicons.org/figma/1A1A1A" }
+      { name: "Figma", logo: "https://cdn.simpleicons.org/figma" },
+      { name: "FigJam", logo: "https://cdn.simpleicons.org/figma" }
     ] 
   },
   { 
     label: "Prototyping & Code", 
     tools: [
-      { name: "Lovable", logo: "https://cdn.simpleicons.org/bolt/1A1A1A" },
-      { name: "Cursor", logo: "https://cdn.simpleicons.org/cursor/1A1A1A" },
-      { name: "Figma Make", logo: "https://cdn.simpleicons.org/figma/1A1A1A" }
+      { name: "Lovable", logo: "https://cdn.simpleicons.org/bolt" },
+      { name: "Cursor", logo: "https://cdn.simpleicons.org/cursor" },
+      { name: "Figma Make", logo: "https://cdn.simpleicons.org/figma" }
     ] 
   },
   { 
     label: "Research", 
     tools: [
-      { name: "Dovetail", logo: "https://cdn.simpleicons.org/dovetail/1A1A1A" },
-      { name: "Hotjar", logo: "https://cdn.simpleicons.org/hotjar/1A1A1A" },
-      { name: "Maze", logo: "https://cdn.simpleicons.org/maze/1A1A1A" },
-      { name: "Lyssna", logo: "https://cdn.simpleicons.org/usabilityhub/1A1A1A" }
+      { name: "Dovetail", logo: "https://cdn.simpleicons.org/dovetail" },
+      { name: "Hotjar", logo: "https://cdn.simpleicons.org/hotjar" },
+      { name: "Maze", logo: "https://cdn.simpleicons.org/maze" },
+      { name: "Lyssna", logo: "https://cdn.simpleicons.org/usabilityhub" }
     ] 
   },
   { 
     label: "Tech", 
     tools: [
-      { name: "HTML/CSS", logo: "https://cdn.simpleicons.org/html5/1A1A1A" },
-      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/1A1A1A" },
-      { name: "React", logo: "https://cdn.simpleicons.org/react/1A1A1A" },
-      { name: "SQL", logo: "https://cdn.simpleicons.org/postgresql/1A1A1A" }
+      { name: "HTML/CSS", logo: "https://cdn.simpleicons.org/html5" },
+      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
+      { name: "React", logo: "https://cdn.simpleicons.org/react" },
+      { name: "SQL", logo: "https://cdn.simpleicons.org/postgresql" }
     ] 
   },
   { 
     label: "Analytics & Growth", 
     tools: [
-      { name: "GA4", logo: "https://cdn.simpleicons.org/googleanalytics/1A1A1A" },
-      { name: "Mixpanel", logo: "https://cdn.simpleicons.org/mixpanel/1A1A1A" },
-      { name: "Looker Studio", logo: "https://cdn.simpleicons.org/looker/1A1A1A" }
+      { name: "GA4", logo: "https://cdn.simpleicons.org/googleanalytics" },
+      { name: "Mixpanel", logo: "https://cdn.simpleicons.org/mixpanel" },
+      { name: "Looker Studio", logo: "https://cdn.simpleicons.org/looker" }
     ] 
   },
   { 
     label: "Design-Code Bridge", 
     tools: [
-      { name: "Storybook", logo: "https://cdn.simpleicons.org/storybook/1A1A1A" },
-      { name: "Chromatic", logo: "https://cdn.simpleicons.org/chromatic/1A1A1A" }
+      { name: "Storybook", logo: "https://cdn.simpleicons.org/storybook" },
+      { name: "Chromatic", logo: "https://cdn.simpleicons.org/chromatic" }
     ] 
   },
 ];
@@ -137,7 +137,7 @@ export default function About() {
                       <img 
                         src={tool.logo} 
                         alt={tool.name}
-                        className="w-5 h-5 opacity-80"
+                        className="w-5 h-5"
                       />
                       <span className="font-medium">{tool.name}</span>
                     </div>
