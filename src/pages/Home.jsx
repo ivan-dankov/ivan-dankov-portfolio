@@ -18,7 +18,7 @@ export default function Home() {
             <p className="text-sm text-[#8C8C8C] uppercase tracking-[0.2em] mb-6">
               Warsaw, Poland
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6"
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0] leading-[1.05] mb-6"
               style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}
             >
               Ivan Dankov
