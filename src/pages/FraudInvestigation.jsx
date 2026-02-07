@@ -64,7 +64,7 @@ export default function FraudInvestigation() {
             <p className="text-base text-[#4A4A4A] leading-relaxed mb-6">
               Customers told us they didn&apos;t need more data — they needed to see connections between data they already had. The existing table view worked for daily monitoring, but investigations required seeing relationships simultaneously.
             </p>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-2 gap-4 text-sm mb-4">
               <div className="bg-[#F5F5F0] rounded-xl p-4">
                 <p className="font-semibold text-[#1A1A1A] mb-2">Daily monitoring</p>
                 <p className="text-[#8C8C8C]">Table view · Scan + triage · Speed matters</p>
@@ -74,7 +74,7 @@ export default function FraudInvestigation() {
                 <p className="text-[#8C8C8C]">Analyzer view · Compare + connect · Relationships matter</p>
               </div>
             </div>
-            <p className="text-sm text-[#8C8C8C] mt-4 italic">
+            <p className="text-sm text-[#8C8C8C] italic">
               Different tasks need different interfaces. This insight drove the dual-view strategy.
             </p>
           </div>
@@ -83,11 +83,10 @@ export default function FraudInvestigation() {
 
       <DecisionBlock
         number="01"
-        label="Dual-view strategy"
+        label="Dual-view strategy — table vs. analyzer"
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
         caption="Table for daily monitoring and triage. Analyzer for deep investigation. Same data, different lenses."
-        text="Could have tried to merge both needs into one view. Research showed the workflows are fundamentally different — forcing them together would compromise both."
-
+        text="Research showed two distinct workflows: quick daily triage (scan, decide, move on) and deep investigation (compare sessions, trace patterns across attributes). Merging both into one view would compromise both. The dual-view lets analysts switch tools based on the task."
       />
 
       <DecisionBlock
