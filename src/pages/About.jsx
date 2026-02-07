@@ -3,12 +3,54 @@ import { Linkedin, Mail, FileDown } from "lucide-react";
 import Footer from "../components/portfolio/Footer";
 
 const toolGroups = [
-  { label: "Design", tools: ["Figma", "FigJam"] },
-  { label: "Prototyping & Code", tools: ["Lovable", "Cursor", "Figma Make"] },
-  { label: "Research", tools: ["Dovetail", "Hotjar", "Maze", "Lyssna"] },
-  { label: "Tech", tools: ["HTML/CSS", "JavaScript", "React", "SQL"] },
-  { label: "Analytics & Growth", tools: ["GA4", "Mixpanel", "Looker Studio"] },
-  { label: "Design-Code Bridge", tools: ["Storybook", "Chromatic"] },
+  { 
+    label: "Design", 
+    tools: [
+      { name: "Figma", logo: "https://cdn.simpleicons.org/figma/1A1A1A" },
+      { name: "FigJam", logo: "https://cdn.simpleicons.org/figma/1A1A1A" }
+    ] 
+  },
+  { 
+    label: "Prototyping & Code", 
+    tools: [
+      { name: "Lovable", logo: "https://cdn.simpleicons.org/bolt/1A1A1A" },
+      { name: "Cursor", logo: "https://cdn.simpleicons.org/cursor/1A1A1A" },
+      { name: "Figma Make", logo: "https://cdn.simpleicons.org/figma/1A1A1A" }
+    ] 
+  },
+  { 
+    label: "Research", 
+    tools: [
+      { name: "Dovetail", logo: "https://cdn.simpleicons.org/dovetail/1A1A1A" },
+      { name: "Hotjar", logo: "https://cdn.simpleicons.org/hotjar/1A1A1A" },
+      { name: "Maze", logo: "https://cdn.simpleicons.org/maze/1A1A1A" },
+      { name: "Lyssna", logo: "https://cdn.simpleicons.org/usabilityhub/1A1A1A" }
+    ] 
+  },
+  { 
+    label: "Tech", 
+    tools: [
+      { name: "HTML/CSS", logo: "https://cdn.simpleicons.org/html5/1A1A1A" },
+      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/1A1A1A" },
+      { name: "React", logo: "https://cdn.simpleicons.org/react/1A1A1A" },
+      { name: "SQL", logo: "https://cdn.simpleicons.org/postgresql/1A1A1A" }
+    ] 
+  },
+  { 
+    label: "Analytics & Growth", 
+    tools: [
+      { name: "GA4", logo: "https://cdn.simpleicons.org/googleanalytics/1A1A1A" },
+      { name: "Mixpanel", logo: "https://cdn.simpleicons.org/mixpanel/1A1A1A" },
+      { name: "Looker Studio", logo: "https://cdn.simpleicons.org/looker/1A1A1A" }
+    ] 
+  },
+  { 
+    label: "Design-Code Bridge", 
+    tools: [
+      { name: "Storybook", logo: "https://cdn.simpleicons.org/storybook/1A1A1A" },
+      { name: "Chromatic", logo: "https://cdn.simpleicons.org/chromatic/1A1A1A" }
+    ] 
+  },
 ];
 
 const experience = [
@@ -90,12 +132,14 @@ export default function About() {
                   {group.tools.map((tool, j) => (
                     <div
                       key={j}
-                      className="flex items-center gap-2 px-4 py-2.5 bg-white text-[#1A1A1A] text-sm rounded-xl border-2 border-[#E8E8E4] hover:border-[#6B6B6B] transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 bg-white text-[#1A1A1A] text-sm rounded-xl border-2 border-[#E8E8E4] hover:border-[#6B6B6B] transition-colors"
                     >
-                      <div className="w-5 h-5 rounded bg-[#F5F5F0] flex items-center justify-center text-[10px] font-bold text-[#6B6B6B]">
-                        {tool.charAt(0)}
-                      </div>
-                      <span className="font-medium">{tool}</span>
+                      <img 
+                        src={tool.logo} 
+                        alt={tool.name}
+                        className="w-5 h-5 opacity-80"
+                      />
+                      <span className="font-medium">{tool.name}</span>
                     </div>
                   ))}
                 </div>
