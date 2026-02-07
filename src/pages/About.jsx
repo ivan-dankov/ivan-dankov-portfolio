@@ -2,13 +2,22 @@ import { motion } from "framer-motion";
 import { Linkedin, Mail, FileDown } from "lucide-react";
 import Footer from "../components/portfolio/Footer";
 
+const toolGroups = [
+  { label: "Design", tools: ["Figma", "FigJam"] },
+  { label: "Prototyping & Code", tools: ["Lovable", "Cursor", "Figma Make"] },
+  { label: "Research", tools: ["Dovetail", "Hotjar", "Maze", "Lyssna"] },
+  { label: "Tech", tools: ["HTML/CSS", "JavaScript", "React", "SQL"] },
+  { label: "Analytics & Growth", tools: ["GA4", "Mixpanel", "Looker Studio"] },
+  { label: "Design-Code Bridge", tools: ["Storybook", "Chromatic"] },
+];
+
 const experience = [
-  { company: "Sift", role: "Staff/Senior Product Designer", period: "2021–2025", duration: "4.5 years", desc: "Fraud detection, analytics, design system" },
-  { company: "Prjctr Design School", role: "Course Curator & Mentor", period: "2022–2023", duration: "", desc: "Mentored ~60 designers" },
-  { company: "VistaCreate", role: "Senior Product Designer", period: "2019–2021", duration: "", desc: "Full product redesign, design system" },
-  { company: "Nova Post", role: "Product Designer", period: "2018–2019", duration: "", desc: "Omnichannel parcel tracking" },
-  { company: "Weblium", role: "UX Designer", period: "2017–2018", duration: "", desc: "0-to-1 product redesign" },
-  { company: "Aimbulance", role: "UX Designer", period: "2015–2016", duration: "", desc: "MasterCard, Unilever, PepsiCo" },
+  { company: "Sift", role: "Staff/Senior Product Designer", period: "2021–2025, 4.5 years", desc: "Fraud detection, analytics, design system" },
+  { company: "Prjctr Design School", role: "Course Curator & Mentor", period: "2022–2023", desc: "Mentored ~60 designers" },
+  { company: "VistaCreate", role: "Senior Product Designer", period: "2019–2021", desc: "Full product redesign, design system" },
+  { company: "Nova Post", role: "Product Designer", period: "2018–2019", desc: "Omnichannel parcel tracking" },
+  { company: "Weblium", role: "UX Designer", period: "2017–2018", desc: "0-to-1 product redesign" },
+  { company: "Aimbulance", role: "UX Designer", period: "2015–2016", desc: "MasterCard, Unilever, PepsiCo" },
 ];
 
 const testimonials = [
@@ -58,10 +67,38 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-6">What I'm looking for</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-6">What I'm looking for</p>
           <p className="text-base text-[#4A4A4A] leading-relaxed">
             I'm looking for a senior or staff product design role at a company building complex B2B tools — fraud, fintech, insurance, clinical data, anything where users make high-stakes decisions with large datasets. I want to work with teams that test before they polish and ship before they perfect.
           </p>
+        </motion.section>
+
+        {/* Tools */}
+        <motion.section
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-8">Tools</p>
+          <div className="space-y-6">
+            {toolGroups.map((group, i) => (
+              <div key={i}>
+                <p className="text-xs text-[#6B6B6B] mb-3">{group.label}</p>
+                <div className="flex flex-wrap gap-2">
+                  {group.tools.map((tool, j) => (
+                    <span
+                      key={j}
+                      className="px-3 py-1.5 bg-[#F5F5F0] text-[#4A4A4A] text-xs rounded-lg border border-[#E8E8E4]"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.section>
 
         {/* Experience Timeline */}
@@ -72,21 +109,15 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-8">Experience</p>
-          <div className="space-y-0">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-8">Experience</p>
+          <div className="space-y-4">
             {experience.map((exp, i) => (
-              <div key={i} className="flex gap-6 py-5 border-b border-[#E8E8E4] last:border-b-0">
-                <div className="w-28 shrink-0">
-                  <p className="text-xs text-[#8C8C8C] font-mono">{exp.period}</p>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#1A1A1A]">
-                    {exp.company}
-                    {exp.duration && <span className="text-[#8C8C8C] font-normal ml-2">· {exp.duration}</span>}
-                  </p>
-                  <p className="text-sm text-[#8C8C8C] mt-0.5">{exp.role}</p>
-                  <p className="text-xs text-[#B0B0AC] mt-1">{exp.desc}</p>
-                </div>
+              <div key={i}>
+                <p className="text-base text-[#1A1A1A]">
+                  <span className="font-semibold">{exp.company}</span> — {exp.role}
+                </p>
+                <p className="text-sm text-[#6B6B6B] mt-1">{exp.period}</p>
+                <p className="text-sm text-[#4A4A4A] mt-1">{exp.desc}</p>
               </div>
             ))}
           </div>
@@ -100,19 +131,11 @@ export default function About() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Teaching</h2>
-          <div className="space-y-4">
-            <div>
-              <p className="text-base text-[#1A1A1A] font-medium">UX Medium Course</p>
-              <p className="text-sm text-[#8C8C8C]">Prjctr Design School — Course curator and instructor</p>
-            </div>
-            <div>
-              <p className="text-base text-[#1A1A1A] font-medium">Product Design Course</p>
-              <p className="text-sm text-[#8C8C8C]">Prjctr Design School — Course curator and instructor</p>
-            </div>
-            <p className="text-sm text-[#4A4A4A] leading-relaxed pt-2">
-              Mentored ~60 mid-level designers across both programs
-            </p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-6">Teaching</p>
+          <div className="space-y-2 text-sm text-[#4A4A4A] leading-relaxed">
+            <p><span className="font-semibold text-[#1A1A1A]">UX Medium Course</span> — Prjctr Design School — Course curator and instructor</p>
+            <p><span className="font-semibold text-[#1A1A1A]">Product Design Course</span> — Prjctr Design School — Course curator and instructor</p>
+            <p>Mentored ~60 mid-level designers across both programs</p>
           </div>
         </motion.section>
 
@@ -124,14 +147,14 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-8">What people say</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-8">Testimonials</p>
           <div className="space-y-8">
             {testimonials.map((t, i) => (
-              <div key={i} className="border-l-2 border-[#E8E8E4] pl-6">
-                <p className="text-base text-[#4A4A4A] leading-relaxed italic">
+              <div key={i}>
+                <p className="text-base text-[#4A4A4A] leading-relaxed mb-3">
                   "{t.quote}"
                 </p>
-                <p className="text-xs text-[#8C8C8C] mt-3">— {t.source}</p>
+                <p className="text-sm text-[#6B6B6B] italic">{t.source}</p>
               </div>
             ))}
           </div>
@@ -145,7 +168,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-6">Get in touch</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-6">Contact</p>
           <div className="flex flex-col gap-3">
             <a
               href="mailto:ivandankovdigital@gmail.com"
