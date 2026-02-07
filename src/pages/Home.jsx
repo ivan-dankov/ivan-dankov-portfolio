@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Mail, FileDown, ArrowDown } from "lucide-react";
 import CaseCard from "../components/portfolio/CaseCard";
-import LucentCard from "../components/portfolio/LucentCard";
+import LucentShowcase from "../components/portfolio/LucentShowcase";
 import Footer from "../components/portfolio/Footer";
 
 export default function Home() {
@@ -129,9 +129,7 @@ export default function Home() {
 
       {/* Lucent Research */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
-        <div className="max-w-2xl">
-          <LucentCard />
-        </div>
+        <LucentShowcase />
       </section>
 
       <Footer />
