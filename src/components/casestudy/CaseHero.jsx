@@ -46,7 +46,7 @@ export default function CaseHero({ image, title, metrics, context }) {
       {/* Sticky context bar */}
       <div className="sticky top-16 z-40 bg-[#FAFAF8]/95 backdrop-blur-md border-b border-[#E8E8E4]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-3">
-          <p className="text-xs text-[#8C8C8C] tracking-wide">{context}</p>
+          <p className="text-xs text-[#6B6B6B] tracking-wide">{context}</p>
         </div>
       </div>
     </section>

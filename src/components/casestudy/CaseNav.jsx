@@ -9,7 +9,7 @@ export default function CaseNav({ prev, next }) {
         {prev ? (
           <Link
             to={createPageUrl(prev.page)}
-            className="group flex items-center gap-3 text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
+            className="group flex items-center gap-3 text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             <div>

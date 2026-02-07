@@ -31,7 +31,7 @@ export default function Layout({ children, currentPageName }) {
           --font-serif: 'DM Serif Display', Georgia, serif;
           --color-bg: #FAFAF8;
           --color-text: #1A1A1A;
-          --color-muted: #8C8C8C;
+          --color-muted: #6B6B6B;
           --color-border: #E8E8E4;
           --color-card: #FFFFFF;
           --color-accent: #2D2D2D;
@@ -60,7 +60,7 @@ export default function Layout({ children, currentPageName }) {
                 key={link.page}
                 to={createPageUrl(link.page)}
                 className={`text-sm transition-opacity hover:opacity-60 ${
-                  currentPageName === link.page ? "font-medium" : "text-[#8C8C8C]"
+                  currentPageName === link.page ? "font-medium" : "text-[#6B6B6B]"
                 }`}
               >
                 {link.label}
@@ -68,7 +68,7 @@ export default function Layout({ children, currentPageName }) {
             ))}
             <a
               href="mailto:ivandankovdigital@gmail.com"
-              className="text-sm text-[#8C8C8C] hover:opacity-60 transition-opacity"
+              className="text-sm text-[#6B6B6B] hover:opacity-60 transition-opacity"
             >
               Contact
             </a>
@@ -95,7 +95,7 @@ export default function Layout({ children, currentPageName }) {
                 {link.label}
               </Link>
             ))}
-            <a href="mailto:ivandankovdigital@gmail.com" className="block text-lg text-[#8C8C8C]">
+            <a href="mailto:ivandankovdigital@gmail.com" className="block text-lg text-[#6B6B6B]">
               Contact
             </a>
           </div>

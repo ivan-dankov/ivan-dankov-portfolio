@@ -67,14 +67,14 @@ export default function FraudInvestigation() {
             <div className="grid grid-cols-2 gap-4 text-sm mb-4">
               <div className="bg-[#F5F5F0] rounded-xl p-4">
                 <p className="font-semibold text-[#1A1A1A] mb-2">Daily monitoring</p>
-                <p className="text-[#8C8C8C]">Table view · Scan + triage · Speed matters</p>
+                <p className="text-[#6B6B6B]">Table view · Scan + triage · Speed matters</p>
               </div>
               <div className="bg-[#F5F5F0] rounded-xl p-4">
                 <p className="font-semibold text-[#1A1A1A] mb-2">Deep investigation</p>
-                <p className="text-[#8C8C8C]">Analyzer view · Compare + connect · Relationships matter</p>
+                <p className="text-[#6B6B6B]">Analyzer view · Compare + connect · Relationships matter</p>
               </div>
             </div>
-            <p className="text-sm text-[#8C8C8C] italic">
+            <p className="text-sm text-[#6B6B6B] italic">
               Different tasks need different interfaces. This insight drove the dual-view strategy.
             </p>
           </div>

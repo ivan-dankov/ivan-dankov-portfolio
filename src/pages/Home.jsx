@@ -29,7 +29,7 @@ export default function Home() {
             <p className="text-base md:text-lg text-[#1A1A1A] leading-relaxed max-w-xl mb-3 font-medium">
               I make high-stakes decisions visible — through design, working prototypes, and systems that scale.
             </p>
-            <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xl mb-8">
+            <p className="text-sm text-[#6B6B6B] leading-relaxed max-w-xl mb-8">
               10+ years in B2B SaaS. Fraud detection, analytics, design systems.
             </p>
           </motion.div>
