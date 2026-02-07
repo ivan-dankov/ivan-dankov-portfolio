@@ -81,19 +81,22 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-8">Tools</p>
-          <div className="space-y-6">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-10">Tools</p>
+          <div className="space-y-8">
             {toolGroups.map((group, i) => (
               <div key={i}>
-                <p className="text-xs text-[#6B6B6B] mb-3">{group.label}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-sm text-[#6B6B6B] mb-4 font-medium">{group.label}</p>
+                <div className="flex flex-wrap gap-3">
                   {group.tools.map((tool, j) => (
-                    <span
+                    <div
                       key={j}
-                      className="px-3 py-1.5 bg-[#F5F5F0] text-[#4A4A4A] text-xs rounded-lg border border-[#E8E8E4]"
+                      className="flex items-center gap-2 px-4 py-2.5 bg-white text-[#1A1A1A] text-sm rounded-xl border-2 border-[#E8E8E4] hover:border-[#6B6B6B] transition-colors"
                     >
-                      {tool}
-                    </span>
+                      <div className="w-5 h-5 rounded bg-[#F5F5F0] flex items-center justify-center text-[10px] font-bold text-[#6B6B6B]">
+                        {tool.charAt(0)}
+                      </div>
+                      <span className="font-medium">{tool}</span>
+                    </div>
                   ))}
                 </div>
               </div>
