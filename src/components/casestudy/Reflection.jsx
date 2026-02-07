@@ -9,7 +9,7 @@ export default function Reflection({ text }) {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
-      <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-6">Reflection</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-6">Reflection</p>
       <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed">
         {text}
       </p>

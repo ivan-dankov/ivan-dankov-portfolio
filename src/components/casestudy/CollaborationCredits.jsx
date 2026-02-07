@@ -10,8 +10,8 @@ export default function CollaborationCredits({ credits }) {
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="border-t border-[#E8E8E4] pt-6">
-        <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-2">Collaboration</p>
-        <p className="text-sm text-[#4A4A4A] leading-relaxed">
+        <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-6">Collaboration</p>
+        <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed">
           {credits}
         </p>
       </div>
