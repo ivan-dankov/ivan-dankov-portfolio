@@ -9,23 +9,63 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Intro */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-16 md:pb-24">
-        <div className="max-w-4xl">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.1] mb-8"
-              style={{ fontFamily: "var(--font-serif, 'Fraunces', Georgia, serif)" }}
-            >
-              I make high-stakes decisions visible — through design, working prototypes, and systems that scale.
+            <p className="text-sm text-[#8C8C8C] uppercase tracking-[0.2em] mb-6">
+              Warsaw, Poland
+            </p>
+            <h1 className="mb-6 text-4xl font-light tracking-[0] leading-[1.05] md:text-6xl lg:text-7xl"
+            style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}>Ivan Dankov
+
+
             </h1>
-            <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed mb-8">
-              Staff / Senior Product Designer with 10 years in product design, 5 of them in B2B SaaS. Fraud detection, analytics, design systems.
+            <p className="text-lg md:text-xl text-[#4A4A4A] leading-relaxed mb-3 font-light">
+              Staff / Senior Product Designer
+            </p>
+            <p className="text-base md:text-lg text-[#1A1A1A] leading-relaxed max-w-xl mb-3 font-medium">
+              I make high-stakes decisions visible&nbsp;— through design, working prototypes, and systems that scale.
+            </p>
+            <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xl mb-8">
+              10+ years in B2B SaaS. Fraud detection, analytics, design systems.
             </p>
           </motion.div>
 
+          <motion.div
+            className="flex items-center gap-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}>
 
+            <a
+              href="https://www.linkedin.com/in/ivan-dankov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors">
+
+              <Linkedin size={16} />
+              LinkedIn
+            </a>
+            <span className="w-px h-4 bg-[#E8E8E4]" />
+            <a
+              href="mailto:ivandankovdigital@gmail.com"
+              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors">
+
+              <Mail size={16} />
+              Email
+            </a>
+            <span className="w-px h-4 bg-[#E8E8E4]" />
+            <a
+              href="#"
+              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors">
+
+              <FileDown size={16} />
+              CV
+            </a>
+          </motion.div>
         </div>
 
         {/* Scroll hint */}
