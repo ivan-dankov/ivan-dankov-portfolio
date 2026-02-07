@@ -20,8 +20,8 @@ export default function CaseHero({ image, title, metrics, context }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight max-w-4xl mb-8"
-              style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-normal text-white tracking-[0] leading-tight max-w-4xl mb-8"
+              style={{ fontFamily: "var(--font-serif, 'Young Serif', Georgia, serif)" }}
             >
               {title}
             </h1>
