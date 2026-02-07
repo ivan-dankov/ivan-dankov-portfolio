@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Linkedin, Mail, FileDown, ArrowDown } from "lucide-react";
+import { LinkedinLogo, EnvelopeSimple, FileArrowDown } from "phosphor-react";
 import CaseCard from "../components/portfolio/CaseCard";
-import LucentCard from "../components/portfolio/LucentCard";
+import LucentShowcase from "../components/portfolio/LucentShowcase";
 import Footer from "../components/portfolio/Footer";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
               Staff / Senior Product Designer
             </p>
             <p className="text-base md:text-lg text-[#1A1A1A] leading-relaxed max-w-xl mb-3 font-medium">
-              I make high-stakes decisions visible — through design, working prototypes, and systems that scale.
+              I make high-stakes decisions visible&nbsp;— through design, working prototypes, and systems that scale.
             </p>
             <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xl mb-8">
               10+ years in B2B SaaS. Fraud detection, analytics, design systems.
@@ -67,17 +67,6 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
-
-        {/* Scroll hint */}
-        <motion.div
-          className="mt-16 flex items-center gap-2 text-[#C4C4C0]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}>
-
-          <ArrowDown size={14} className="animate-bounce" />
-          <span className="text-xs uppercase tracking-[0.15em]">Selected work</span>
-        </motion.div>
       </section>
 
       {/* Case Study Cards */}
@@ -129,9 +118,7 @@ export default function Home() {
 
       {/* Lucent Research */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
-        <div className="max-w-2xl">
-          <LucentCard />
-        </div>
+        <LucentShowcase />
       </section>
 
       <Footer />
