@@ -2,8 +2,10 @@ import CaseHero from "../components/casestudy/CaseHero";
 import BeforeAfter from "../components/casestudy/BeforeAfter";
 import ProblemShift from "../components/casestudy/ProblemShift";
 import DecisionBlock from "../components/casestudy/DecisionBlock";
+import CaseOutcomes from "../components/casestudy/CaseOutcomes";
 import WhatIDidntBuild from "../components/casestudy/WhatIDidntBuild";
 import Reflection from "../components/casestudy/Reflection";
+import CollaborationCredits from "../components/casestudy/CollaborationCredits";
 import CaseNav from "../components/casestudy/CaseNav";
 import Footer from "../components/portfolio/Footer";
 
@@ -14,8 +16,8 @@ export default function ChargebackWorkflows() {
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80"
         title="Increasing agent throughput 60% by redesigning chargeback workflows"
         metrics={[
+          { value: "~50 to ~80", label: "Cases per day" },
           { value: "60%", label: "Throughput increase" },
-          { value: "~80", label: "Cases per day" },
           { value: "Enterprise", label: "Alaska Airlines closed" },
         ]}
         context="Staff Product Designer · Sift — B2B fraud platform · 4 months · Sole designer"
@@ -62,6 +64,14 @@ export default function ChargebackWorkflows() {
         text={`Simpler approach was binary complete/incomplete. Three states added the "enhanceable" middle ground — fields that pass but could be stronger.`}
       />
 
+      <CaseOutcomes
+        outcomes={[
+          { metric: "~50 to ~80 cases/day", description: "Agent throughput increased 60% with the new structured field system and completion tracking." },
+          { metric: "Alaska Airlines closed", description: "Enterprise customer deal closed after demonstrating the scalability of the new workflow." },
+          { metric: "Fewer incomplete submissions", description: "Structured fields with clear status indicators eliminated silent incomplete submissions." },
+        ]}
+      />
+
       <WhatIDidntBuild
         items={[
           { label: "Batch processing", reason: "Multiple disputes at once. Deprioritized — single-case quality had to improve first." },
@@ -72,6 +82,10 @@ export default function ChargebackWorkflows() {
 
       <Reflection
         text={`I'd push harder for analytics instrumentation from day one. We shipped without tracking field-level completion rates or time-per-section — that data would have guided which fields to auto-fill first. I'd also involve processor compliance requirements earlier to avoid a post-launch iteration.`}
+      />
+
+      <CollaborationCredits
+        credits="Designed solo. Worked with the PM on requirements scoping and the engineering lead on field architecture migration."
       />
 
       <CaseNav

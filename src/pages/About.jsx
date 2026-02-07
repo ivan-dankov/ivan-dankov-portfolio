@@ -92,6 +92,30 @@ export default function About() {
           </div>
         </motion.section>
 
+        {/* Teaching */}
+        <motion.section
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Teaching</h2>
+          <div className="space-y-4">
+            <div>
+              <p className="text-base text-[#1A1A1A] font-medium">UX Medium Course</p>
+              <p className="text-sm text-[#8C8C8C]">Prjctr Design School — Course curator and instructor</p>
+            </div>
+            <div>
+              <p className="text-base text-[#1A1A1A] font-medium">Product Design Course</p>
+              <p className="text-sm text-[#8C8C8C]">Prjctr Design School — Course curator and instructor</p>
+            </div>
+            <p className="text-sm text-[#4A4A4A] leading-relaxed pt-2">
+              Mentored ~60 mid-level designers across both programs
+            </p>
+          </div>
+        </motion.section>
+
         {/* Testimonials */}
         <motion.section
           className="mb-20"

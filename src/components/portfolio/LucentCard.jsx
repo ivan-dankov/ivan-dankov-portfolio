@@ -66,7 +66,7 @@ export default function LucentCard() {
                 </div>
                 <div>
                   <span className="font-semibold text-[#1A1A1A]">Why I killed it:</span>{" "}
-                  The problem was real, but the solution was a learnable skill. If the founder can fix it by learning better synthesis techniques, users will too.
+                  The problem was real, but the solution was a learnable skill. AI could build the tool. It couldn&apos;t solve the real problem — which was a skills gap, not a software gap.
                 </div>
                 <div>
                   <span className="font-semibold text-[#1A1A1A]">What it proved:</span>{" "}

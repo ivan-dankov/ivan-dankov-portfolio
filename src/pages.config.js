@@ -47,20 +47,20 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
-import Home from './pages/Home';
-import ChargebackWorkflows from './pages/ChargebackWorkflows';
-import FraudInvestigation from './pages/FraudInvestigation';
-import DesignSystem from './pages/DesignSystem';
 import About from './pages/About';
+import ChargebackWorkflows from './pages/ChargebackWorkflows';
+import DesignSystem from './pages/DesignSystem';
+import FraudInvestigation from './pages/FraudInvestigation';
+import Home from './pages/Home';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "Home": Home,
-    "ChargebackWorkflows": ChargebackWorkflows,
-    "FraudInvestigation": FraudInvestigation,
-    "DesignSystem": DesignSystem,
     "About": About,
+    "ChargebackWorkflows": ChargebackWorkflows,
+    "DesignSystem": DesignSystem,
+    "FraudInvestigation": FraudInvestigation,
+    "Home": Home,
 }
 
 export const pagesConfig = {

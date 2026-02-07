@@ -1,8 +1,10 @@
 import CaseHero from "../components/casestudy/CaseHero";
 import ProblemShift from "../components/casestudy/ProblemShift";
 import DecisionBlock from "../components/casestudy/DecisionBlock";
+import CaseOutcomes from "../components/casestudy/CaseOutcomes";
 import WhatIDidntBuild from "../components/casestudy/WhatIDidntBuild";
 import Reflection from "../components/casestudy/Reflection";
+import CollaborationCredits from "../components/casestudy/CollaborationCredits";
 import CaseNav from "../components/casestudy/CaseNav";
 import Footer from "../components/portfolio/Footer";
 import { motion } from "framer-motion";
@@ -111,6 +113,14 @@ export default function DesignSystem() {
         </div>
       </motion.section>
 
+      <CaseOutcomes
+        outcomes={[
+          { metric: "Console 2.0 shipped on system", description: "First full product redesign built on the design system, proving the foundation." },
+          { metric: "3× faster collaboration", description: "Design-engineering handoff speed increased with shared components and documentation." },
+          { metric: "<5 weeks Figma migration", description: "Full team migrated from Sketch + Abstract to Figma with complete adoption." },
+        ]}
+      />
+
       <WhatIDidntBuild
         items={[
           { label: "Formal governance model", reason: "No contribution guidelines or approval process. System was small enough for design-engineering syncs. Governance would have added overhead at our scale." },
@@ -121,6 +131,10 @@ export default function DesignSystem() {
 
       <Reflection
         text={`I'd add adoption and quality metrics from day one — component coverage, usage frequency, and UI bug rates tied to system vs. non-system code. Without data, it was hard to prove the system's value beyond "things feel faster." I'd also establish a governance model earlier — the system outgrew the "two designers manage it informally" approach.`}
+      />
+
+      <CollaborationCredits
+        credits="Co-created with the Senior Product Designer. Adopted across teams led by product managers and engineering leads from Console, Workflows, and Analytics."
       />
 
       <CaseNav

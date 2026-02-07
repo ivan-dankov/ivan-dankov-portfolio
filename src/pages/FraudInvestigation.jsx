@@ -2,8 +2,10 @@ import CaseHero from "../components/casestudy/CaseHero";
 import BeforeAfter from "../components/casestudy/BeforeAfter";
 import ProblemShift from "../components/casestudy/ProblemShift";
 import DecisionBlock from "../components/casestudy/DecisionBlock";
+import CaseOutcomes from "../components/casestudy/CaseOutcomes";
 import WhatIDidntBuild from "../components/casestudy/WhatIDidntBuild";
 import Reflection from "../components/casestudy/Reflection";
+import CollaborationCredits from "../components/casestudy/CollaborationCredits";
 import CaseNav from "../components/casestudy/CaseNav";
 import Footer from "../components/portfolio/Footer";
 import { motion } from "framer-motion";
@@ -31,8 +33,8 @@ export default function FraudInvestigation() {
 
       <ProblemShift
         problemLines={[
-          "Fraud analysts investigating account takeovers had to scroll through long activity timelines, memorize attributes across screens, and manually compare sessions to spot patterns.",
-          "The existing tools showed raw event lists. No way to see relationships between sessions, users, IPs, and locations at a glance.",
+          "Sift's account takeover product lacked the investigation depth that enterprise customers needed to justify their spend. Fraud analysts had the data — they couldn't see the connections.",
+          "Analysts had to scroll through long activity timelines, memorize attributes across screens, and manually compare sessions to spot patterns. The existing tools showed raw event lists with no way to see relationships between sessions, users, IPs, and locations at a glance.",
           "Analysts handled hundreds of sessions per day. Every extra click or context switch meant slower investigations and missed threats.",
         ]}
         shiftQuote={`From "scroll through events and remember what you saw" to "select sessions and see all relationships instantly."`}
@@ -102,7 +104,15 @@ export default function FraudInvestigation() {
         label="Working prototype with Lovable"
         image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80"
         caption="Figma showed the concept. Lovable made it testable with real interaction patterns."
-        text={`Most teams stop at Figma. Building a working prototype took extra time but gave customers something real to react to — and gave engineering confidence in the interaction model.`}
+        text={`Most teams stop at Figma. Building a working prototype took extra time but gave customers something real to react to — and gave engineering confidence in the interaction model. The Lovable prototype handled the core interaction model but couldn't replicate production data volumes or edge cases. Those gaps became the engineering team's starting spec.`}
+      />
+
+      <CaseOutcomes
+        outcomes={[
+          { metric: "6 customer interviews", description: "Validated the approach with Shutterstock, Bitso, StitchFix, Hertz, Uphold, and Newfold." },
+          { metric: "3 of 6 called it 'game changer'", description: "Three customers independently used the same phrase to describe session comparison." },
+          { metric: "Adopted into roadmap", description: "Engineering committed resources after seeing the working prototype with real interaction patterns." },
+        ]}
       />
 
       <WhatIDidntBuild
@@ -115,6 +125,10 @@ export default function FraudInvestigation() {
 
       <Reflection
         text={`The Lovable prototype was the differentiator — it changed the conversation from "is this feasible?" to "when can we build this?" I'd use this approach earlier in future projects. The risk is scope creep from 4 parallel workstreams — next time I'd fight harder to sequence them.`}
+      />
+
+      <CollaborationCredits
+        credits="Led design across 4 workstreams. Research with the UX Research Lead. Prototype validation with 6 customer teams. Engineering scoping with the engineering lead and trust & safety architect."
       />
 
       <CaseNav
