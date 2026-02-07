@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LinkedinLogo, EnvelopeSimple, DownloadSimple, ArrowDown } from "phosphor-react";
+import { Linkedin, Mail, FileDown, ArrowDown } from "lucide-react";
 import CaseCard from "../components/portfolio/CaseCard";
 import LucentCard from "../components/portfolio/LucentCard";
 import Footer from "../components/portfolio/Footer";
@@ -9,29 +9,12 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Intro */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-16 md:pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Photo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-square max-w-md mx-auto md:mx-0"
-          >
-            <div className="w-full h-full rounded-2xl overflow-hidden bg-[#E8E8E4]">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" 
-                alt="Ivan Dankov"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </motion.div>
-
-          {/* Content */}
+        <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          >
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
+
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.1] mb-8"
               style={{ fontFamily: "var(--font-serif, 'Fraunces', Georgia, serif)" }}
             >
@@ -41,6 +24,8 @@ export default function Home() {
               Staff / Senior Product Designer with 10 years in product design, 5 of them in B2B SaaS. Fraud detection, analytics, design systems.
             </p>
           </motion.div>
+
+
         </div>
 
         {/* Scroll hint */}
@@ -48,9 +33,9 @@ export default function Home() {
           className="mt-16 flex items-center gap-2 text-[#C4C4C0]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          <ArrowDown size={14} weight="bold" className="animate-bounce" />
+          transition={{ delay: 1, duration: 1 }}>
+
+          <ArrowDown size={14} className="animate-bounce" />
           <span className="text-xs uppercase tracking-[0.15em]">Selected work</span>
         </motion.div>
       </section>
