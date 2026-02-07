@@ -136,8 +136,8 @@ export default function About() {
                     >
                       {tool.svg ? (
                         <div 
-                          className="w-5 h-5"
-                          dangerouslySetInnerHTML={{ __html: tool.svg }}
+                          className="w-5 h-5 flex items-center justify-center"
+                          dangerouslySetInnerHTML={{ __html: tool.svg.replace('<svg', '<svg class="w-full h-full"') }}
                         />
                       ) : (
                         <img 
