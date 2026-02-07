@@ -21,7 +21,7 @@ export default function CaseHero({ image, title, metrics, context }) {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight max-w-4xl mb-8"
-              style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}
+              style={{ fontFamily: "var(--font-serif)" }}
             >
               {title}
             </h1>
