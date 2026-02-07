@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { createPageUrl } from "./utils";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { List, X } from "phosphor-react";
 
 export default function Layout({ children, currentPageName }) {
   const [scrolled, setScrolled] = useState(false);
@@ -48,9 +48,10 @@ export default function Layout({ children, currentPageName }) {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <Link
             to={createPageUrl("Home")}
-            className="text-sm font-medium tracking-tight hover:opacity-60 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-60 transition-opacity"
           >
-            Ivan Dankov
+            <span className="text-sm font-medium tracking-tight">Ivan Dankov</span>
+            <span className="text-xs text-[#8C8C8C]">Warsaw, Poland</span>
           </Link>
 
           {/* Desktop nav */}
@@ -79,7 +80,7 @@ export default function Layout({ children, currentPageName }) {
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 -mr-2"
           >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            {menuOpen ? <X size={20} /> : <List size={20} />}
           </button>
         </div>
 

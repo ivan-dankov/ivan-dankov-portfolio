@@ -1,4 +1,4 @@
-import { Linkedin, Mail, FileDown } from "lucide-react";
+import { LinkedinLogo, EnvelopeSimple, DownloadSimple } from "phosphor-react";
 
 export default function Footer() {
   return (
@@ -14,19 +14,19 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors"
           >
-            <Linkedin size={18} />
+            <LinkedinLogo size={18} weight="regular" />
           </a>
           <a
             href="mailto:ivandankovdigital@gmail.com"
             className="text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors"
           >
-            <Mail size={18} />
+            <EnvelopeSimple size={18} weight="regular" />
           </a>
           <a
             href="#"
             className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
           >
-            <FileDown size={16} />
+            <DownloadSimple size={16} weight="regular" />
             Download CV
           </a>
         </div>
