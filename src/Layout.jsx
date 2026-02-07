@@ -25,10 +25,10 @@ export default function Layout({ children, currentPageName }) {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] font-sans antialiased">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
         :root {
           --font-sans: 'Inter', system-ui, sans-serif;
-          --font-serif: 'Urbanist', system-ui, sans-serif;
+          --font-serif: 'Fraunces', Georgia, serif;
           --color-bg: #FAFAF8;
           --color-text: #1A1A1A;
           --color-muted: #6B6B6B;
