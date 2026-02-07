@@ -74,44 +74,45 @@ export default function DesignSystem() {
 
       <DecisionBlock
         number="01"
-        label="Audit first, build second"
+        label="Starting from the product, not from theory"
         image="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1000&q=80"
-        caption="Mapped every pattern across every product before building a single component."
-        text="Pressure to start building components immediately. The audit took time but prevented building the wrong things. Found duplicate patterns across products that nobody had catalogued."
+        caption="Mapped every UI pattern across every product before building a single component. The system grew from what existed, not from an ideal."
+        text="Most design systems start with foundational primitives — colors, spacing, type scales. I started with the most-used product patterns because that's where fragmentation hurt most. Buttons weren't the bottleneck. Inconsistent tables, filters, and decision components were. The audit identified what to unify first."
       />
 
       <DecisionBlock
         number="02"
-        label="Data-heavy components as first-class citizens"
+        label="Domain-specific components, not a generic UI kit"
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80"
-        caption="Tables, filters, and data visualizations got the same attention as buttons and inputs. Because that's what Sift's products are made of."
-        text="Most design systems start with basic UI primitives. We prioritized the components that carried the most product-specific complexity — the ones that actually slowed teams down."
+        caption="Tables, filters, and decision components designed for analysts making high-stakes calls on fraud data. Not a generic kit."
+        text="We debated building a generic, extensible system vs. one optimized for Sift's domain. I pushed for domain-specific defaults — a table component that assumed fraud data columns, a decision selector matching the block/watch/accept workflow. Teams didn't have to configure components for basic use cases, which drove faster adoption."
         reversed
       />
 
       <DecisionBlock
         number="03"
-        label="Design-code sync through Storybook"
+        label="Storybook as the contract between design and code"
         image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80"
-        caption="Components existed in both Figma and code. Storybook was the bridge."
-        text={`Maintaining parity between design and code is expensive. Without it, the system drifts and teams stop trusting it. Storybook made the code the source of truth that designers could verify against.`}
+        caption="If it didn't exist in Storybook, it wasn't part of the system. Storybook was the single source of truth."
+        text="The alternative was a Figma-only system with handoff documentation. I pushed for Storybook because it made the system enforceable — engineers checked component behavior in code, not a design spec. Chromatic caught visual regressions automatically. Expensive to maintain, but without it the system would drift."
       />
 
-      {/* Figma Migration - brief */}
-      <motion.section
-        className="max-w-3xl mx-auto px-6 md:px-12 py-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="border-l-2 border-[#E8E8E4] pl-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8C8C8C] mb-3">Figma Migration</p>
-          <p className="text-base text-[#4A4A4A] leading-relaxed">
-            The migration was not just a tool switch — Figma&apos;s collaborative features let us evolve the system faster and removed the file-management overhead that was slowing the team down. Completed in under 5 weeks with full team adoption.
-          </p>
-        </div>
-      </motion.section>
+      <DecisionBlock
+        number="04"
+        label="Figma migration as a system upgrade"
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
+        caption="Migrated from Sketch + Abstract to Figma in under 5 weeks. Full team adopted and productive."
+        text="This wasn't just a tool switch. Sketch + Abstract created file-management overhead that slowed the whole team. Figma's collaborative features let us evolve the system faster — real-time editing, shared libraries, no version conflicts. The migration removed the bottleneck that was capping how fast the system could grow."
+        reversed
+      />
+
+      <DecisionBlock
+        number="05"
+        label="Documentation as a product surface"
+        image="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1000&q=80"
+        caption="Documentation written for the people using the system, not for the people who built it."
+        text="Most design system docs are written by designers for designers. I treated documentation as a product surface — written for engineers implementing components and new designers onboarding. Clear usage guidelines, do/don't examples, and interaction specs. If the docs were unclear, the component wasn't done."
+      />
 
       <CaseOutcomes
         outcomes={[

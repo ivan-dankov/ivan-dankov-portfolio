@@ -44,7 +44,7 @@ export default function ChargebackWorkflows() {
         label="Templates to structured fields"
         image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80"
         caption="Every evidence field has a clear state — incomplete, enhanceable, or complete. Completion is deterministic, not guesswork."
-        text={`We considered adding validation to the existing template model. I pushed for a full restructure because validation alone wouldn't make requirements visible upfront — agents would still discover problems only at submission.`}
+        text="The existing UI was a single long template where agents typed freeform text. We considered adding validation on top of it. I pushed for a full restructure into discrete fields with known states — because validation alone wouldn't show agents what's required upfront."
       />
 
       <DecisionBlock
@@ -60,8 +60,25 @@ export default function ChargebackWorkflows() {
         number="03"
         label="Field-level status system"
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80"
-        caption="Three states per field. Agents see at a glance what's missing, what could be improved, and what's ready."
-        text={`Simpler approach was binary complete/incomplete. Three states added the "enhanceable" middle ground — fields that pass but could be stronger.`}
+        caption="Three states per field. Red: missing. Yellow: passable but weak. Green: ready."
+        text={`Binary complete/incomplete was the simpler path. But agents needed to know the difference between "this will fail" and "this will pass but could be stronger." The three-state model let teams prioritize which fields to improve when deadlines were tight.`}
+      />
+
+      <DecisionBlock
+        number="04"
+        label="Field navigator as checklist and wayfinding"
+        image="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1000&q=80"
+        caption="Sidebar navigator doubles as a progress tracker. Agents see which sections are incomplete without scrolling through the full document."
+        text="Explored a linear wizard (step 1, 2, 3). Rejected it — agents don't work sequentially. They fill what they know first, then circle back. The navigator supports both patterns: jump to any section, see overall progress at a glance."
+        reversed
+      />
+
+      <DecisionBlock
+        number="05"
+        label="Explicit finalization step"
+        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80"
+        caption="Full preview before submission. Field-by-field status. Irreversibility warning. No more silent incomplete submissions."
+        text="Before the redesign, agents could submit without reviewing — incomplete sections were silently excluded, leading to weak dispute responses. The finalization modal forces a deliberate check. It shows exactly what will be sent and what's missing, making the submit action an informed decision instead of a guess."
       />
 
       <CaseOutcomes

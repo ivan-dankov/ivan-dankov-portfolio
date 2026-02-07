@@ -92,19 +92,36 @@ export default function FraudInvestigation() {
 
       <DecisionBlock
         number="02"
-        label="Cross-highlighting in the analyzer"
+        label="Cross-highlighting in the analyzer (ThreatMiner)"
         image="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1000&q=80"
-        caption="Select a session, see every related attribute light up. No more memorizing and scrolling back."
-        text="Engineering complexity was high. The Lovable prototype proved the interaction model before committing engineering resources."
+        caption="Select a session, see every related attribute light up across columns. Patterns that were invisible in flat tables become obvious."
+        text="We considered a graph visualization (nodes and edges) — it looks impressive in demos but breaks down at scale. With 149 sessions and 11 users, graphs become unreadable. The linked-column approach scales because it uses familiar table patterns with cross-highlighting layered on top."
         reversed
       />
 
       <DecisionBlock
         number="03"
-        label="Working prototype with Lovable"
+        label="Three view modes — Cards, List, Analyzer"
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
+        caption="List for scannable rows. Cards for visual grouping. Analyzer for cross-referenced investigation."
+        text="We debated making the Analyzer the default because it was the most powerful. I argued for List — it's what analysts already knew. The Analyzer is a tool you reach for when you need it, not something forced on every session. Lowering the adoption barrier meant meeting users where they were."
+      />
+
+      <DecisionBlock
+        number="04"
+        label="Working prototype with Lovable — not just Figma"
         image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80"
         caption="Figma showed the concept. Lovable made it testable with real interaction patterns."
-        text={`Most teams stop at Figma. Building a working prototype took extra time but gave customers something real to react to — and gave engineering confidence in the interaction model. The Lovable prototype handled the core interaction model but couldn't replicate production data volumes or edge cases. Those gaps became the engineering team's starting spec.`}
+        text={`Static mocks can't test cross-highlighting, filtering, or drill-down workflows. I built a functional prototype with Lovable so customers could click through real interaction patterns during feedback sessions. This surfaced usability issues Figma would have missed — and gave engineering confidence to commit resources. The Lovable prototype handled the core interaction model but couldn't replicate production data volumes or edge cases. Those gaps became the engineering team's starting spec.`}
+        reversed
+      />
+
+      <DecisionBlock
+        number="05"
+        label="Activity History histogram for time navigation"
+        image="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1000&q=80"
+        caption="Replaced infinite scroll and 'Load more' with a clickable histogram. Click a time range, jump directly to that period's events."
+        text="Every customer interview flagged the same pain: navigating 12 months of activity by clicking 'Load more' repeatedly. The histogram gives analysts a visual map of event density over time. Click any bar to jump there. A supporting piece, but it solved a universal complaint."
       />
 
       <CaseOutcomes
