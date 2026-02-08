@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeroImage from "../assets/design-system/hero/hero.png";
+import HeroImage from "../assets/design-system/hero/hero.webp";
 import CaseCard from "../components/portfolio/CaseCard";
 import LucentShowcase from "../components/portfolio/LucentShowcase";
 import Footer from "../components/portfolio/Footer";
@@ -95,7 +95,7 @@ export default function Home() {
             title="Scaling product delivery across 5 teams with a shared design platform"
             metrics={[
               { value: "Console 2.0", label: "Shipped on system" },
-              { value: "3×", label: "Faster collaboration" },
+              { value: "3×", label: "Less UI bugs" },
               { value: "<5wk", label: "Figma migration" }
             ]}
             context={[

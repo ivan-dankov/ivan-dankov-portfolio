@@ -8,14 +8,14 @@ import CaseStudySection from "../components/case-study/CaseStudySection";
 import ShiftComparison from "../components/case-study/ShiftComparison";
 import KeyDecision from "../components/case-study/KeyDecision";
 import CaseStudyFooterNav from "../components/case-study/CaseStudyFooterNav";
-import ProblemBefore from "../assets/design-system/problem/before.png";
-import ProblemAfter from "../assets/design-system/problem/after.png";
-import KeyDecision01 from "../assets/design-system/key-decisions/01.png";
-import KeyDecision02 from "../assets/design-system/key-decisions/02.png";
-import KeyDecision03 from "../assets/design-system/key-decisions/03.png";
-import KeyDecision04 from "../assets/design-system/key-decisions/04.png";
-import KeyDecision05 from "../assets/design-system/key-decisions/05.png";
-import HeroImage from "../assets/design-system/hero/hero.png";
+import ProblemBefore from "../assets/design-system/problem/before.webp";
+import ProblemAfter from "../assets/design-system/problem/after.webp";
+import KeyDecision01 from "../assets/design-system/key-decisions/01.webp";
+import KeyDecision02 from "../assets/design-system/key-decisions/02.webp";
+import KeyDecision03 from "../assets/design-system/key-decisions/03.webp";
+import KeyDecision04 from "../assets/design-system/key-decisions/04.webp";
+import KeyDecision05 from "../assets/design-system/key-decisions/05.webp";
+import HeroImage from "../assets/design-system/hero/hero.webp";
 
 
 export default function DesignSystem() {
@@ -42,7 +42,7 @@ export default function DesignSystem() {
           <CaseStudyMetrics
             items={[
               { value: "Shipped", label: "Console 2.0 shipped on the system" },
-              { value: "3×", label: "Faster design-engineering collaboration" },
+              { value: "3×", label: "Less UI bugs, more focus on UX" },
               { value: "<5 Weeks", label: "Full Figma migration completed" },
               { value: "100%", label: "Unified design language across all Sift products" },
             ]}
@@ -174,8 +174,8 @@ export default function DesignSystem() {
               <p className="text-sm text-[#4A4A4A] leading-relaxed">Full product overhaul built entirely on the system. The first proof that shared components could carry a complete product.</p>
             </div>
             <div className="p-6 bg-white border border-[#E8E8E4] rounded-xl">
-              <p className="font-medium text-[#1A1A1A] mb-3">3x faster collaboration</p>
-              <p className="text-sm text-[#4A4A4A] leading-relaxed">Design-engineering handoff went from custom specs per feature to shared component references. Review cycles shortened because both sides worked from the same Storybook source.</p>
+              <p className="font-medium text-[#1A1A1A] mb-3">3x less UI bugs & more focus on UX</p>
+              <p className="text-sm text-[#4A4A4A] leading-relaxed">By standardizing the UI layer, we eliminated entire classes of visual regressions. This 3x reduction in UI bugs meant the team naturally shifted focus from implementation details to solving core UX problems.</p>
             </div>
             <div className="p-6 bg-white border border-[#E8E8E4] rounded-xl">
               <p className="font-medium text-[#1A1A1A] mb-3">&lt;5 weeks Figma migration</p>
@@ -207,9 +207,9 @@ export default function DesignSystem() {
 
         <CaseStudySection title="Reflection">
           <p className="text-lg text-[#4A4A4A] leading-relaxed max-w-3xl mb-8">
-            I'd add adoption and quality metrics from day one - component coverage, usage frequency, and UI bug rates tied to system vs. non-system code. Without data, it was hard to prove the system's value beyond "things feel faster." I'd also establish a governance model earlier - the system outgrew the "two designers manage it informally" approach. And I'd build tighter feedback loops with consuming teams so the system evolved with product needs, not behind them.
+            I'd add automated adoption metrics from day one - specifically component coverage and usage frequency. Having this data earlier would have helped prioritize which components to build next based on actual usage. I'd also establish a governance model earlier - the system outgrew the "two designers manage it informally" approach. And I'd build tighter feedback loops with consuming teams so the system evolved with product needs, not behind them.
           </p>
-          <p className="text-sm text-[#6B6B6B] italic">
+          <p className="text-sm text-[#6B6B6B]">
             Collaboration credit: Co-created system architecture with one other designer. Aligned adoption across 5 product teams, frontend engineering, and PM. Storybook integration done in close partnership with frontend engineering leads.
           </p>
         </CaseStudySection>
