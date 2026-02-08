@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, Users, TrendingDown } from "lucide-react";
+import { ExternalLink, Zap } from "lucide-react";
 
 export default function LucentShowcase() {
   return (
     <motion.div
-      className="bg-gradient-to-br from-[#1A1A1A] via-[#2D2D2D] to-[#1A1A1A] rounded-3xl overflow-hidden"
+      className="bg-gradient-to-br from-[#1A1A1A] via-[#2D2D2D] to-[#1A1A1A] rounded-2xl overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -19,7 +19,7 @@ export default function LucentShowcase() {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
                   <Zap className="w-8 h-8 text-white/60" />
                 </div>
-                <p className="text-xs text-white/40 uppercase tracking-wider">Product Interface</p>
+                <p className="text-xs text-white/60 uppercase tracking-wider">Product Interface</p>
               </div>
             </div>
           </div>
@@ -58,7 +58,10 @@ export default function LucentShowcase() {
               </p>
             </div>
           </div>
+        </div>
 
+        {/* Right: Button */}
+        <div className="flex items-center justify-center lg:justify-end">
           <a
             href="https://dankov.work/research-clarity"
             target="_blank"
@@ -68,28 +71,6 @@ export default function LucentShowcase() {
             See the product
             <ExternalLink size={16} />
           </a>
-        </div>
-
-        {/* Right: Outcome Badge */}
-        <div className="flex items-center justify-center lg:justify-end">
-          <div className="relative">
-            <div className="bg-red-500/10 border-2 border-red-500/30 rounded-2xl p-6 text-center rotate-3 hover:rotate-0 transition-transform">
-              <div className="mb-3">
-                <div className="w-12 h-12 mx-auto rounded-full bg-red-500/20 flex items-center justify-center mb-2">
-                  <TrendingDown className="w-6 h-6 text-red-400" />
-                </div>
-              </div>
-              <p className="text-red-400 font-bold text-lg uppercase tracking-wider mb-1">
-                Validated
-              </p>
-              <p className="text-red-400 font-bold text-lg uppercase tracking-wider line-through decoration-2">
-                & Killed
-              </p>
-              <p className="text-white/50 text-xs mt-3">
-                Smart kill decision
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 

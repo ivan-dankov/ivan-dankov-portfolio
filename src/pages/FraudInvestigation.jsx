@@ -1,158 +1,231 @@
-import CaseHero from "../components/casestudy/CaseHero";
-import BeforeAfter from "../components/casestudy/BeforeAfter";
-import ProblemShift from "../components/casestudy/ProblemShift";
-import DecisionBlock from "../components/casestudy/DecisionBlock";
-import CaseOutcomes from "../components/casestudy/CaseOutcomes";
-import WhatIDidntBuild from "../components/casestudy/WhatIDidntBuild";
-import Reflection from "../components/casestudy/Reflection";
-import CollaborationCredits from "../components/casestudy/CollaborationCredits";
-import CaseNav from "../components/casestudy/CaseNav";
-import Footer from "../components/portfolio/Footer";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import CaseStudyLayout from "../components/case-study/CaseStudyLayout";
+import CaseStudyNav from "../components/case-study/CaseStudyNav";
+import CaseStudyHero from "../components/case-study/CaseStudyHero";
+import CaseStudyMetrics from "../components/case-study/CaseStudyMetrics";
+import CaseStudyContext from "../components/case-study/CaseStudyContext";
+import CaseStudySection from "../components/case-study/CaseStudySection";
+import ShiftComparison from "../components/case-study/ShiftComparison";
+import KeyDecision from "../components/case-study/KeyDecision";
+import CaseStudyFooterNav from "../components/case-study/CaseStudyFooterNav";
 
 export default function FraudInvestigation() {
   return (
-    <div className="min-h-screen pt-16">
-      <CaseHero
-        image="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1400&q=80"
-        title="Redesigning fraud investigation UX — from research to working prototype in 8 weeks"
-        metrics={[
-          { value: "6", label: "Customer interviews" },
-          { value: "3/6", label: '"Game changer"' },
-          { value: "Adopted", label: "Into engineering roadmap" },
-        ]}
-        context="Staff Product Designer · Sift — B2B fraud platform · 8 weeks · Discovery to validated prototype"
-      />
+    <CaseStudyLayout>
+      <CaseStudyNav title="ATO Revamp" />
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-32 md:pt-44 pb-24">
 
-      <BeforeAfter
-        beforeImage="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80"
-        afterImage="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1200&q=80"
-        beforeCaption="Scroll through events. Memorize attributes. Scroll again to compare. Repeat across sessions."
-        afterCaption="Select a session. See all relationships instantly."
-      />
-
-      <ProblemShift
-        problemLines={[
-          "Sift's account takeover product lacked the investigation depth that enterprise customers needed to justify their spend. Fraud analysts had the data — they couldn't see the connections.",
-          "Analysts had to scroll through long activity timelines, memorize attributes across screens, and manually compare sessions to spot patterns. The existing tools showed raw event lists with no way to see relationships between sessions, users, IPs, and locations at a glance.",
-          "Analysts handled hundreds of sessions per day. Every extra click or context switch meant slower investigations and missed threats.",
-        ]}
-        shiftQuote={`From "scroll through events and remember what you saw" to "select sessions and see all relationships instantly."`}
-      />
-
-      {/* Research Insight */}
-      <motion.section
-        className="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-20"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center">
-          <div className="md:col-span-3">
-            <div className="bg-[#1A1A1A] rounded-2xl p-8 md:p-12">
-              <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-6">Customer Research</p>
-              <blockquote className="text-xl md:text-2xl text-white font-light leading-relaxed italic"
-                style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}
-              >
-                "Session comparison is a game changer."
-              </blockquote>
-              <p className="text-white/50 text-sm mt-6">— 3 of 6 customers, independently</p>
-            </div>
-          </div>
-          <div className="md:col-span-2">
-            <p className="text-base text-[#4A4A4A] leading-relaxed mb-6">
-              Customers told us they didn&apos;t need more data — they needed to see connections between data they already had. The existing table view worked for daily monitoring, but investigations required seeing relationships simultaneously.
-            </p>
-            <div className="grid grid-cols-2 gap-4 text-sm mb-4">
-              <div className="bg-[#F5F5F0] rounded-xl p-4">
-                <p className="font-semibold text-[#1A1A1A] mb-2">Daily monitoring</p>
-                <p className="text-[#6B6B6B]">Table view · Scan + triage · Speed matters</p>
-              </div>
-              <div className="bg-[#F5F5F0] rounded-xl p-4">
-                <p className="font-semibold text-[#1A1A1A] mb-2">Deep investigation</p>
-                <p className="text-[#6B6B6B]">Analyzer view · Compare + connect · Relationships matter</p>
+        <CaseStudyHero
+          title="Redesigning fraud investigation UX — from research to working prototype in 8 weeks"
+          image={
+            <div className="relative w-full aspect-[16/9] bg-[#E5E5E5] rounded-xl overflow-hidden shadow-sm border border-[#E8E8E4] mb-8">
+              <img
+                src="/Link_2.png"
+                alt="ThreatMiner view with cross-highlighted sessions, users, IPs, and locations"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center text-[#6B6B6B] text-sm font-medium bg-black/5">
+                [Image: Link_2.png - ThreatMiner view]
               </div>
             </div>
-            <p className="text-sm text-[#6B6B6B] italic">
-              Different tasks need different interfaces. This insight drove the dual-view strategy.
+          }
+        >
+          <CaseStudyMetrics
+            items={[
+              { value: "6", label: "Customers Interviewed (Shutterstock, Bitso, StitchFix...)" },
+              { value: "3 of 6", label: "Described solution as \"Game Changer\"" },
+              { value: "Validated", label: "Prototype adopted into roadmap" },
+            ]}
+          />
+        </CaseStudyHero>
+
+        <CaseStudyContext
+          items={[
+            { label: "Role", value: "Staff Product Designer" },
+            { label: "Company", value: "Sift — B2B Fraud Platform" },
+            { label: "Timeline", value: "8 Weeks" },
+            { label: "Scope", value: "Discovery to Validated Prototype" },
+          ]}
+        />
+
+        <div className="mb-24 h-px bg-[#E8E8E4] w-full" />
+
+        <CaseStudySection title="The Problem">
+          <h3 className="text-2xl md:text-3xl font-normal text-[#1A1A1A] mb-8 leading-tight">
+            Fraud analysts investigating account takeovers had to scroll through long activity timelines, memorize attributes across screens, and manually compare sessions to spot patterns.
+          </h3>
+          <div className="space-y-6 text-lg text-[#4A4A4A] leading-relaxed max-w-3xl mb-12">
+            <p>
+              The existing tools showed raw event lists. No way to see relationships between sessions, users, IPs, and locations at a glance.
+            </p>
+            <p>
+              Analysts handled hundreds of sessions per day. Every extra click or context switch meant slower investigations and missed threats.
             </p>
           </div>
-        </div>
-      </motion.section>
 
-      <DecisionBlock
-        number="01"
-        label="Dual-view strategy — table vs. analyzer"
-        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
-        caption="Table for daily monitoring and triage. Analyzer for deep investigation. Same data, different lenses."
-        text="Research showed two distinct workflows: quick daily triage (scan, decide, move on) and deep investigation (compare sessions, trace patterns across attributes). Merging both into one view would compromise both. The dual-view lets analysts switch tools based on the task."
-      />
+          <ShiftComparison
+            beforeContent={(
+              <>
+                <div className="relative w-full aspect-video bg-[#FAFAFA] border border-dashed border-[#CCCCCC] rounded-lg p-4 mb-4 flex items-center justify-center text-center">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Activity_History.png - Old timeline]</span>
+                </div>
+                <p className="text-lg text-[#1A1A1A]">"Scroll through events. Memorize attributes. Scroll again to compare."</p>
+              </>
+            )}
+            afterContent={(
+              <>
+                <div className="relative w-full aspect-video bg-[#1A1A1A] border border-dashed border-[#555] rounded-lg p-4 mb-4 flex items-center justify-center text-center">
+                  <span className="text-xs text-white/50">[Image: Link_2.png prototype]</span>
+                </div>
+                <p className="text-lg text-[#1A1A1A]">"Select a session. See all relationships instantly."</p>
+              </>
+            )}
+          />
+        </CaseStudySection>
 
-      <DecisionBlock
-        number="02"
-        label="Cross-highlighting in the analyzer (ThreatMiner)"
-        image="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1000&q=80"
-        caption="Select a session, see every related attribute light up across columns. Patterns that were invisible in flat tables become obvious."
-        text="We considered a graph visualization (nodes and edges) — it looks impressive in demos but breaks down at scale. With 149 sessions and 11 users, graphs become unreadable. The linked-column approach scales because it uses familiar table patterns with cross-highlighting layered on top."
-        reversed
-      />
+        <CaseStudySection title="Research Insight">
+          <div className="bg-[#1A1A1A] p-12 rounded-2xl text-center mb-12">
+            <p className="text-2xl md:text-3xl font-serif text-white/90 italic leading-relaxed mb-6">
+              "Session comparison is a game changer."
+            </p>
+            <p className="text-white/50 text-sm font-medium uppercase tracking-widest">— 3 of 6 customers, independently</p>
+          </div>
 
-      <DecisionBlock
-        number="03"
-        label="Three view modes — Cards, List, Analyzer"
-        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80"
-        caption="List for scannable rows. Cards for visual grouping. Analyzer for cross-referenced investigation."
-        text="We debated making the Analyzer the default because it was the most powerful. I argued for List — it's what analysts already knew. The Analyzer is a tool you reach for when you need it, not something forced on every session. Lowering the adoption barrier meant meeting users where they were."
-      />
+          <p className="text-lg text-[#4A4A4A] leading-relaxed mb-8">
+            Customers told us they didn't need more data — they needed to see connections between data they already had. The existing table view worked for daily monitoring, but investigations required seeing relationships simultaneously.
+          </p>
 
-      <DecisionBlock
-        number="04"
-        label="Working prototype with Lovable — not just Figma"
-        image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80"
-        caption="Figma showed the concept. Lovable made it testable with real interaction patterns."
-        text={`Static mocks can't test cross-highlighting, filtering, or drill-down workflows. I built a functional prototype with Lovable so customers could click through real interaction patterns during feedback sessions. This surfaced usability issues Figma would have missed — and gave engineering confidence to commit resources. The Lovable prototype handled the core interaction model but couldn't replicate production data volumes or edge cases. Those gaps became the engineering team's starting spec.`}
-        reversed
-      />
+          {/* Diagram */}
+          <div className="grid grid-cols-2 gap-4 bg-white p-6 rounded-xl border border-[#E8E8E4] mb-4">
+            <div>
+              <p className="text-xs uppercase tracking-wider text-[#6B6B6B] mb-1">Daily Monitoring</p>
+              <p className="font-medium text-[#1A1A1A] mb-2">Table View</p>
+              <p className="text-sm text-[#4A4A4A]">Scan + Triage</p>
+              <p className="text-sm font-medium text-[#006E75] mt-1">Speed matters</p>
+            </div>
+            <div className="border-l border-[#E8E8E4] pl-4">
+              <p className="text-xs uppercase tracking-wider text-[#6B6B6B] mb-1">Deep Investigation</p>
+              <p className="font-medium text-[#1A1A1A] mb-2">Analyzer View</p>
+              <p className="text-sm text-[#4A4A4A]">Compare + Connect</p>
+              <p className="text-sm font-medium text-[#006E75] mt-1">Relationships matter</p>
+            </div>
+          </div>
+          <p className="text-sm text-[#6B6B6B] italic">Different tasks need different interfaces. This insight drove the dual-view strategy.</p>
+        </CaseStudySection>
 
-      <DecisionBlock
-        number="05"
-        label="Activity History histogram for time navigation"
-        image="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1000&q=80"
-        caption="Replaced infinite scroll and 'Load more' with a clickable histogram. Click a time range, jump directly to that period's events."
-        text="Every customer interview flagged the same pain: navigating 12 months of activity by clicking 'Load more' repeatedly. The histogram gives analysts a visual map of event density over time. Click any bar to jump there. A supporting piece, but it solved a universal complaint."
-      />
+        <div className="mb-24 h-px bg-[#E8E8E4] w-full" />
 
-      <CaseOutcomes
-        outcomes={[
-          { metric: "6 customer interviews", description: "Validated the approach with Shutterstock, Bitso, StitchFix, Hertz, Uphold, and Newfold." },
-          { metric: "3 of 6 called it 'game changer'", description: "Three customers independently used the same phrase to describe session comparison." },
-          { metric: "Adopted into roadmap", description: "Engineering committed resources after seeing the working prototype with real interaction patterns." },
-        ]}
-      />
+        <CaseStudySection title="Key Decisions">
+          <div className="space-y-24">
+            <KeyDecision
+              number="01"
+              title="Dual-view strategy"
+              image={
+                <div className="aspect-video bg-[#E0E0E0] flex items-center justify-center text-center px-4">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Explore__Table_View.png + Link_2.png <br /> Two views side-by-side]</span>
+                </div>
+              }
+              imageCaption='"Table for daily monitoring and triage. Analyzer for deep investigation. Same data, different lenses."'
+            >
+              <p>
+                Research showed two distinct workflows: quick daily triage (scan, decide, move on) and deep investigation (compare sessions, trace patterns across attributes). Merging both into one view would compromise both. The dual-view lets analysts switch tools based on the task.
+              </p>
+            </KeyDecision>
 
-      <WhatIDidntBuild
-        items={[
-          { label: "Graph visualization", reason: "Explored nodes-and-edges for session relationships. Does not scale past ~50 nodes. Analysts needed to take action directly from the view." },
-          { label: "Real-time alerting", reason: "Customers wanted notifications. Required backend infrastructure that was not in place. Investigation tools had to ship first." },
-          { label: "Custom attribute ordering", reason: "Users asked to reorder columns. Kept fixed for MVP to reduce scope and test the core concept." },
-        ]}
-      />
+            <KeyDecision
+              number="02"
+              title="Cross-highlighting in the analyzer"
+              image={
+                <div className="aspect-video bg-[#E0E0E0] flex items-center justify-center text-center px-4">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Link_2.png detail <br /> Showing connected sessions/users/IPs]</span>
+                </div>
+              }
+              imageCaption='"Select a session, see every related attribute light up across columns. Patterns that were invisible in flat tables become obvious."'
+            >
+              <p>
+                We considered a graph visualization (nodes and edges) — it looks impressive in demos but breaks down at scale. With 149 sessions and 11 users, graphs become unreadable. The linked-column approach scales because it uses familiar table patterns with cross-highlighting layered on top.
+              </p>
+            </KeyDecision>
 
-      <Reflection
-        text={`The Lovable prototype was the differentiator — it changed the conversation from "is this feasible?" to "when can we build this?" I'd use this approach earlier in future projects. The risk is scope creep from 4 parallel workstreams — next time I'd fight harder to sequence them.`}
-      />
+            <KeyDecision
+              number="03"
+              title="Three view modes"
+              image={
+                <div className="aspect-video bg-[#E0E0E0] flex items-center justify-center text-center px-4">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Table / Cards / Analyzer side-by-side]</span>
+                </div>
+              }
+              imageCaption='"List for scannable rows. Cards for visual grouping. Analyzer for cross-referenced investigation."'
+            >
+              <p>
+                We debated making the Analyzer the default because it was the most powerful. I argued for List — it's what analysts already knew. The Analyzer is a tool you reach for when you need it, not something forced on every session. Lowering the adoption barrier meant meeting users where they were.
+              </p>
+            </KeyDecision>
 
-      <CollaborationCredits
-        credits="Led design across 4 workstreams. Research with the UX Research Lead. Prototype validation with 6 customer teams. Engineering scoping with the engineering lead and trust & safety architect."
-      />
+            <KeyDecision
+              number="04"
+              title="Working prototype with Lovable"
+              image={
+                <div className="aspect-video bg-[#E0E0E0] flex items-center justify-center text-center px-4">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Figma frame vs Lovable build]</span>
+                </div>
+              }
+              imageCaption='"Figma showed the concept. Lovable made it testable with real interaction patterns."'
+            >
+              <p>
+                Static mocks can't test cross-highlighting, filtering, or drill-down workflows. I built a functional prototype with Lovable so customers could click through real interaction patterns during feedback sessions. This surfaced usability issues Figma would have missed — and gave engineering confidence to commit resources.
+              </p>
+            </KeyDecision>
 
-      <CaseNav
-        prev={{ page: "ChargebackWorkflows", label: "Chargeback Workflows" }}
-        next={{ page: "DesignSystem", label: "Design System" }}
-      />
+            <KeyDecision
+              number="05"
+              title="Activity History histogram"
+              image={
+                <div className="aspect-video bg-[#E0E0E0] flex items-center justify-center text-center px-4">
+                  <span className="text-xs text-[#6B6B6B]">[Image: Activity_History.png - Histogram navigation]</span>
+                </div>
+              }
+              imageCaption='"Replaced infinite scroll and &#39;Load more&#39; with a clickable histogram. Click a time range, jump directly to that period&#39;s events."'
+            >
+              <p>
+                Every customer interview flagged the same pain: navigating 12 months of activity by clicking "Load more" repeatedly. The histogram gives analysts a visual map of event density over time. Click any bar to jump there. A supporting piece, but it solved a universal complaint.
+              </p>
+            </KeyDecision>
 
-      <Footer />
-    </div>
+          </div>
+        </CaseStudySection>
+
+        <div className="mb-24 h-px bg-[#E8E8E4] w-full" />
+
+        <CaseStudySection title="What I Didn't Build">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-white border border-[#E8E8E4] rounded-xl">
+              <p className="font-medium text-[#1A1A1A] mb-3">Graph visualization</p>
+              <p className="text-sm text-[#4A4A4A] leading-relaxed">Explored nodes-and-edges for session relationships. Doesn't scale past ~50 nodes. Analysts needed to take action directly from the view.</p>
+            </div>
+            <div className="p-6 bg-white border border-[#E8E8E4] rounded-xl">
+              <p className="font-medium text-[#1A1A1A] mb-3">Real-time alerting</p>
+              <p className="text-sm text-[#4A4A4A] leading-relaxed">Customers wanted notifications. Required backend infrastructure that wasn't in place. Investigation tools had to ship first.</p>
+            </div>
+            <div className="p-6 bg-white border border-[#E8E8E4] rounded-xl">
+              <p className="font-medium text-[#1A1A1A] mb-3">Custom attribute ordering</p>
+              <p className="text-sm text-[#4A4A4A] leading-relaxed">Users asked to reorder columns. Kept fixed for MVP to reduce scope and test the core concept.</p>
+            </div>
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection title="Reflection">
+          <p className="text-lg text-[#4A4A4A] leading-relaxed max-w-3xl">
+            The Lovable prototype was the differentiator — it changed the conversation from "is this feasible?" to "when can we build this?" I'd use this approach earlier in future projects. The risk is scope creep from 4 parallel workstreams — next time I'd fight harder to sequence them.
+          </p>
+        </CaseStudySection>
+
+        <CaseStudyFooterNav
+          previous={{ link: "/ChargebackWorkflows", title: "Chargeback Workflows" }}
+          next={{ link: "/DesignSystem", title: "Design System" }}
+        />
+
+      </div>
+    </CaseStudyLayout>
   );
 }

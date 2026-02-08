@@ -12,7 +12,7 @@ export default function CaseHero({ image, title, metrics, context }) {
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/40 to-transparent" />
-        
+
         {/* Title overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
           <motion.div
@@ -25,6 +25,24 @@ export default function CaseHero({ image, title, metrics, context }) {
             >
               {title}
             </h1>
+
+            {/* Context Badges */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {Array.isArray(context) ? (
+                context.map((badge, i) => (
+                  <span
+                    key={i}
+                    className="px-2.5 py-1 bg-white/10 text-white/80 text-xs font-medium rounded-full border border-white/10 backdrop-blur-sm"
+                  >
+                    {badge}
+                  </span>
+                ))
+              ) : (
+                <span className="px-2.5 py-1 bg-white/10 text-white/80 text-xs font-medium rounded-full border border-white/10 backdrop-blur-sm">
+                  {context}
+                </span>
+              )}
+            </div>
 
             {/* Metrics bar */}
             <div className="flex flex-wrap gap-8 md:gap-12 mb-6">
@@ -40,13 +58,6 @@ export default function CaseHero({ image, title, metrics, context }) {
               ))}
             </div>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Sticky context bar */}
-      <div className="sticky top-16 z-40 bg-[#FAFAF8]/95 backdrop-blur-md border-b border-[#E8E8E4]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-3">
-          <p className="text-xs text-[#6B6B6B] tracking-wide">{context}</p>
         </div>
       </div>
     </section>

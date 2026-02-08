@@ -23,13 +23,13 @@ export default function Layout({ children, currentPageName }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A] font-sans antialiased">
+    <div className="min-h-screen bg-[#F5F5F0] text-[#1A1A1A] font-sans antialiased">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
         :root {
           --font-sans: 'Inter', system-ui, sans-serif;
           --font-serif: 'Fraunces', Georgia, serif;
-          --color-bg: #FAFAF8;
+          --color-bg: #F5F5F0;
           --color-text: #1A1A1A;
           --color-muted: #6B6B6B;
           --color-border: #E8E8E4;
@@ -38,20 +38,20 @@ export default function Layout({ children, currentPageName }) {
         }
         body { font-family: var(--font-sans); }
         * { -webkit-font-smoothing: antialiased; }
-        ::selection { background: #1A1A1A; color: #FAFAF8; }
+        ::selection { background: #1A1A1A; color: #F5F5F0; }
       `}</style>
 
+
       {/* Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-[#FAFAF8]/90 backdrop-blur-md border-b border-[#E8E8E4]" : "bg-transparent"
-      }`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#F5F5F0]/90 backdrop-blur-md border-b border-[#E8E8E4]" : "bg-transparent"
+        }`}>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <Link
             to={createPageUrl("Home")}
             className="flex items-center gap-2 hover:opacity-60 transition-opacity"
           >
             <span className="text-sm font-medium tracking-tight">Ivan Dankov</span>
-            <span className="text-xs text-[#8C8C8C]">Warsaw, Poland</span>
+            <span className="text-sm text-[#6B6B6B]">Warsaw, Poland</span>
           </Link>
 
           {/* Desktop nav */}
@@ -60,9 +60,8 @@ export default function Layout({ children, currentPageName }) {
               <Link
                 key={link.page}
                 to={createPageUrl(link.page)}
-                className={`text-sm transition-opacity hover:opacity-60 ${
-                  currentPageName === link.page ? "font-medium" : "text-[#6B6B6B]"
-                }`}
+                className={`text-sm transition-opacity hover:opacity-60 ${currentPageName === link.page ? "font-medium" : "text-[#6B6B6B]"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -86,7 +85,7 @@ export default function Layout({ children, currentPageName }) {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[#FAFAF8] border-b border-[#E8E8E4] px-6 py-6 space-y-4">
+          <div className="md:hidden bg-[#F5F5F0] border-b border-[#E8E8E4] px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.page}

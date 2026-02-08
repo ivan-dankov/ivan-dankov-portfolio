@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function DecisionBlock({ number, label, image, caption, text, reversed }) {
+export default function DecisionBlock({ number, label, image, caption, text, reversed = false }) {
   return (
     <motion.section
       className="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-20"
@@ -9,9 +9,8 @@ export default function DecisionBlock({ number, label, image, caption, text, rev
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center ${
-        reversed ? "md:direction-rtl" : ""
-      }`}>
+      <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center ${reversed ? "md:direction-rtl" : ""
+        }`}>
         {/* Image */}
         <div className={`md:col-span-3 ${reversed ? "md:order-2" : "md:order-1"}`}>
           <div className="rounded-xl overflow-hidden bg-[#F0F0EC]">
@@ -21,7 +20,7 @@ export default function DecisionBlock({ number, label, image, caption, text, rev
               className="w-full h-auto object-cover"
             />
           </div>
-          <p className="text-xs text-[#8C8C8C] mt-3 leading-relaxed">{caption}</p>
+          <p className="text-xs text-[#6B6B6B] mt-3 leading-relaxed">{caption}</p>
         </div>
 
         {/* Text */}

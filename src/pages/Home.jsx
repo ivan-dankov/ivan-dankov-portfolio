@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import { LinkedinLogo, EnvelopeSimple, FileArrowDown } from "phosphor-react";
+import HeroImage from "../assets/design-system/hero/hero.png";
 import CaseCard from "../components/portfolio/CaseCard";
 import LucentShowcase from "../components/portfolio/LucentShowcase";
 import Footer from "../components/portfolio/Footer";
+import SocialLinks from "../components/portfolio/SocialLinks";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Intro */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-16 md:pb-24">
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-44 lg:pt-52 pb-16 md:pb-32 lg:pb-40">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -21,60 +22,52 @@ export default function Home() {
               I make high-stakes decisions visible&nbsp;— through design, working prototypes, and systems that scale.
             </h1>
             <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed mb-8">
-              Staff / Senior Product Designer with 10 years in product design, 5 of them in B2B SaaS. Fraud detection, analytics, design systems.
+              Staff / Senior Product Designer with 10 years in product design, last 5 of them in B2B SaaS. Fraud detection, analytics, design systems. I use AI daily to research, prototype, and validate - but users always lead the way.
             </p>
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-5"
+            className="flex items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <a
-              href="https://www.linkedin.com/in/ivan-dankov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
-            >
-              <LinkedinLogo size={16} weight="regular" />
-              LinkedIn
-            </a>
-            <span className="w-px h-4 bg-[#E8E8E4]" />
-            <a
-              href="mailto:ivandankovdigital@gmail.com"
-              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
-            >
-              <EnvelopeSimple size={16} weight="regular" />
-              Email
-            </a>
-            <span className="w-px h-4 bg-[#E8E8E4]" />
-            <a
-              href="#"
-              className="flex items-center gap-2 text-sm text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
-            >
-              <FileArrowDown size={16} weight="regular" />
-              CV
-            </a>
+            <SocialLinks />
           </motion.div>
         </div>
       </section>
 
       {/* Case Study Cards */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      {/* Work Section */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-12 md:pb-16">
+        <div className="flex items-end justify-between mb-12 md:mb-16">
+          <h2
+            className="text-3xl md:text-5xl font-normal tracking-tight text-[#1A1A1A]"
+            style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}
+          >
+            Selected Work
+          </h2>
+          <span className="hidden md:block text-[#6B6B6B] text-sm uppercase tracking-wider mb-2">
+            2020 — 2025
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Card 1 - Dispute Workspace (large, spans 2 cols) */}
           <div className="md:col-span-2">
             <CaseCard
               page="ChargebackWorkflows"
               image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
-              title="Increasing agent throughput 60% by redesigning chargeback workflows"
+              title="Increasing agent throughput 140% by redesigning chargeback workflows"
               metrics={[
-                { value: "60%", label: "Throughput increase" },
-                { value: "~80", label: "Cases per day" }
+                { value: "50 to 120", label: "Cases per day" },
+                { value: "140%", label: "Throughput increase" },
+                { value: "Enterprise", label: "Alaska Airlines closed" }
               ]}
-              context="Sift · B2B fraud platform · 4 months · Sole designer"
-              hoverLabel="+60% throughput"
+              context={[
+                "Staff Product Designer", "Sift — B2B fraud platform", "4 months", "Sole designer"
+              ]}
+              hoverLabel="+140% throughput"
               large
             />
           </div>
@@ -85,30 +78,34 @@ export default function Home() {
             image="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80"
             title="Redesigning fraud investigation UX — from research to working prototype"
             metrics={[
+              { value: "6", label: "Customer interviews" },
               { value: "3/6", label: '"Game changer"' },
-              { value: "8wk", label: "Discovery to prototype" }
+              { value: "Adopted", label: "Into engineering roadmap" }
             ]}
-            context="Sift · 8 weeks · Discovery to validated prototype"
+            context={[
+              "Staff Product Designer", "Sift — B2B fraud platform", "8 weeks", "Discovery to validated prototype"
+            ]}
             hoverLabel={'"Game changer" — 3 of 6 customers'}
           />
 
           {/* Card 3 - Design System */}
           <CaseCard
             page="DesignSystem"
-            image="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&q=80"
+            image={HeroImage}
             title="Scaling product delivery across 5 teams with a shared design platform"
             metrics={[
+              { value: "Console 2.0", label: "Shipped on system" },
               { value: "3×", label: "Faster collaboration" },
               { value: "<5wk", label: "Figma migration" }
             ]}
-            context="Sift · Co-led with 1 designer · 4+ years"
+            context={[
+              "Staff Product Designer", "Sift", "Co-led with 1 designer", "4+ years"
+            ]}
             hoverLabel="3 products, 1 system"
           />
         </div>
-      </section>
 
-      {/* Lucent Research */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
+        {/* Lucent Research */}
         <LucentShowcase />
       </section>
 

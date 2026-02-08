@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "../../utils";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export default function CaseNav({ prev, next }) {
+export default function CaseNav({ prev = null, next = null }) {
   return (
     <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-16 border-t border-[#E8E8E4]">
       <div className="flex items-center justify-between">
@@ -21,7 +21,7 @@ export default function CaseNav({ prev, next }) {
         {next ? (
           <Link
             to={createPageUrl(next.page)}
-            className="group flex items-center gap-3 text-right text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors"
+            className="group flex items-center gap-3 text-right text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors"
           >
             <div>
               <p className="text-xs uppercase tracking-[0.15em] mb-1">Next</p>

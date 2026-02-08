@@ -15,7 +15,7 @@ export default function LucentCard() {
     >
       <div className="p-6 md:p-8">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-[10px] uppercase tracking-[0.2em] text-[#8C8C8C] font-medium bg-[#E8E8E4] px-3 py-1 rounded-full">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-medium bg-[#E8E8E4] px-3 py-1 rounded-full">
             Side project
           </span>
           <span className="text-[10px] uppercase tracking-[0.2em] text-[#B8564F] font-medium bg-[#B8564F]/10 px-3 py-1 rounded-full">
@@ -26,13 +26,13 @@ export default function LucentCard() {
         <h3 className="text-lg md:text-xl font-semibold tracking-tight mb-2">
           Lucent Research — Validated, then killed
         </h3>
-        <p className="text-sm text-[#8C8C8C] leading-relaxed mb-4">
+        <p className="text-sm text-[#6B6B6B] leading-relaxed mb-4">
           AI tool for interview synthesis. Built with Cursor. Validated with PMs. Killed when data showed the problem was learnable, not buildable.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {["Product validation", "AI", "Cursor"].map((tag) => (
-            <span key={tag} className="text-xs text-[#8C8C8C] border border-[#E8E8E4] rounded-full px-3 py-1">
+            <span key={tag} className="text-xs text-[#6B6B6B] border border-[#E8E8E4] rounded-full px-3 py-1">
               {tag}
             </span>
           ))}
