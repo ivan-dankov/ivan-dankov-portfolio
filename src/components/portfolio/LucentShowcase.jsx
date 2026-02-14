@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Zap } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import lucentImage from "../../assets/Lucent/Lucent.png";
 
 export default function LucentShowcase() {
   return (
@@ -13,16 +14,11 @@ export default function LucentShowcase() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_0.8fr] gap-8 p-8 md:p-12">
         {/* Left: Product Screenshot */}
         <div className="flex items-center justify-center">
-          <div className="relative w-full aspect-[4/3] bg-white/5 rounded-xl border border-white/10 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center p-6">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-white/60" />
-                </div>
-                <p className="text-xs text-white/60 uppercase tracking-wider">Product Interface</p>
-              </div>
-            </div>
-          </div>
+          <img
+            src={lucentImage}
+            alt="Lucent Research Interface"
+            className="w-full h-auto rounded-xl"
+          />
         </div>
 
         {/* Center: Content */}
@@ -42,19 +38,19 @@ export default function LucentShowcase() {
             <div className="flex gap-3 items-start">
               <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
               <p className="text-white/80 text-sm leading-relaxed">
-                <span className="font-semibold text-white">Built:</span> Working prototype with Cursor + Supabase
+                <span className="font-semibold text-white">Started:</span> Built a live AI companion for user interviews using Cursor + Supabase.
               </p>
             </div>
             <div className="flex gap-3 items-start">
               <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
               <p className="text-white/80 text-sm leading-relaxed">
-                <span className="font-semibold text-white">Validated:</span> 60% of PMs cite synthesis as top pain. Reddit testing. User interviews.
+                <span className="font-semibold text-white">Pivoted:</span> Feedback from PMs and Designers shifted the focus to synthesis automation.
               </p>
             </div>
             <div className="flex gap-3 items-start">
               <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
               <p className="text-white/80 text-sm leading-relaxed">
-                <span className="font-semibold text-white">Killed:</span> Problem was learnable, not buildable. Saved ~$75K in opportunity cost.
+                <span className="font-semibold text-white">Killed:</span> The core problem was educational, not technical. Users needed better skills, not just another tool.
               </p>
             </div>
           </div>
@@ -63,10 +59,10 @@ export default function LucentShowcase() {
         {/* Right: Button */}
         <div className="flex items-center justify-center lg:justify-end">
           <a
-            href="https://dankov.work/research-clarity"
+            href="https://dankov.framer.website/research-clarity"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#1A1A1A] px-6 py-3 rounded-xl font-medium text-sm hover:bg-white/90 transition-colors w-fit"
+            className="inline-flex items-center gap-2 bg-white text-[#1A1A1A] px-6 py-3 rounded-full font-medium text-sm hover:bg-white/90 transition-colors w-fit"
           >
             See the product
             <ExternalLink size={16} />
@@ -80,7 +76,7 @@ export default function LucentShowcase() {
           {["Side project", "AI", "Cursor", "Product validation", "Kill decision"].map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-full border border-white/10"
+              className="px-3 py-1 text-white/60 text-xs rounded-full border border-white/10"
             >
               {tag}
             </span>

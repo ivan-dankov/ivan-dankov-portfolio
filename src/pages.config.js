@@ -50,6 +50,7 @@
 import About from './pages/About';
 import ChargebackWorkflows from './pages/ChargebackWorkflows';
 import DesignSystem from './pages/DesignSystem';
+import DesignSystemPresentation from './pages/DesignSystemPresentation';
 import FraudInvestigation from './pages/FraudInvestigation';
 import Home from './pages/Home';
 import __Layout from './Layout.jsx';
@@ -59,6 +60,7 @@ export const PAGES = {
     "About": About,
     "ChargebackWorkflows": ChargebackWorkflows,
     "DesignSystem": DesignSystem,
+    "DesignSystemPresentation": DesignSystemPresentation,
     "FraudInvestigation": FraudInvestigation,
     "Home": Home,
 }

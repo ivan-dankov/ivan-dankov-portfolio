@@ -1,4 +1,4 @@
-export default function KeyDecision({ number, title, image, imageCaption = null, children }) {
+export default function KeyDecision({ number, title, image, imageCaption = null, children, extraContent = null }) {
     return (
         <div>
             <div className="flex items-baseline gap-4 mb-6">
@@ -18,6 +18,11 @@ export default function KeyDecision({ number, title, image, imageCaption = null,
             <div className="text-lg text-[#4A4A4A] leading-relaxed max-w-3xl">
                 {children}
             </div>
+            {extraContent && (
+                <div className="mt-8">
+                    {extraContent}
+                </div>
+            )}
         </div>
     );
 }

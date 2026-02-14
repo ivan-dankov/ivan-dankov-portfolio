@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CaseStudyLayout from "../components/case-study/CaseStudyLayout";
-import CaseStudyNav from "../components/case-study/CaseStudyNav";
+
 import CaseStudyHero from "../components/case-study/CaseStudyHero";
 import CaseStudyMetrics from "../components/case-study/CaseStudyMetrics";
 import CaseStudyContext from "../components/case-study/CaseStudyContext";
@@ -21,7 +21,7 @@ import HeroImage from "../assets/design-system/hero/hero.webp";
 export default function DesignSystem() {
   return (
     <CaseStudyLayout>
-      <CaseStudyNav title="DesignSystem" />
+
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-32 md:pt-44 pb-24">
 
         <CaseStudyHero
@@ -41,10 +41,9 @@ export default function DesignSystem() {
         >
           <CaseStudyMetrics
             items={[
-              { value: "Shipped", label: "Console 2.0 shipped on the system" },
-              { value: "3×", label: "Less UI bugs, more focus on UX" },
-              { value: "<5 Weeks", label: "Full Figma migration completed" },
-              { value: "100%", label: "Unified design language across all Sift products" },
+              { value: "100%", label: "Unified design language", description: "Across all Sift products (Console, Dispute, ATO)." },
+              { value: "3×", label: "Less UI bugs", description: "Standardized components eliminated visual regressions." },
+              { value: "<5 Weeks", label: "Figma migration", description: "Full team migrated from Sketch + Abstract." },
             ]}
           />
         </CaseStudyHero>
@@ -53,10 +52,11 @@ export default function DesignSystem() {
           items={[
             { label: "Role", value: "Staff Product Designer" },
             { label: "Company", value: "Sift" },
-            { label: "Team", value: "Co-led with 1 Designer" },
-            { label: "Adoption", value: "5 Product Teams" },
+            { label: "Timeline", value: "4+ Years" },
+            { label: "Team", value: "Co-led with 1 Staff FE Engineer" },
           ]}
         />
+
 
         <div className="mb-24 h-px bg-[#E8E8E4] w-full" />
 
@@ -206,12 +206,31 @@ export default function DesignSystem() {
         </CaseStudySection>
 
         <CaseStudySection title="Reflection">
-          <p className="text-lg text-[#4A4A4A] leading-relaxed max-w-3xl mb-8">
-            I'd add automated adoption metrics from day one - specifically component coverage and usage frequency. Having this data earlier would have helped prioritize which components to build next based on actual usage. I'd also establish a governance model earlier - the system outgrew the "two designers manage it informally" approach. And I'd build tighter feedback loops with consuming teams so the system evolved with product needs, not behind them.
-          </p>
-          <p className="text-sm text-[#6B6B6B]">
-            Collaboration credit: Co-created system architecture with one other designer. Aligned adoption across 5 product teams, frontend engineering, and PM. Storybook integration done in close partnership with frontend engineering leads.
-          </p>
+          <div className="space-y-8 max-w-3xl">
+            <p className="text-lg text-[#4A4A4A] leading-relaxed">
+              I'd add automated adoption metrics from day one - specifically component coverage and usage frequency. Having this data earlier would have helped prioritize which components to build next based on actual usage. I'd also establish a governance model earlier - the system outgrew the "two designers manage it informally" approach. And I'd build tighter feedback loops with consuming teams so the system evolved with product needs, not behind them.
+            </p>
+
+            <p className="text-sm text-[#6B6B6B]">
+              Collaboration credit: Co-created system architecture with one Staff FE Engineer. Aligned adoption across 5 product teams, frontend engineering, and PM. Storybook integration done in close partnership with frontend engineering leads.
+            </p>
+          </div>
+        </CaseStudySection>
+
+        <div className="my-24 h-px bg-[#E8E8E4] w-full" />
+
+        <CaseStudySection title="Presentation">
+          <div className="space-y-6 max-w-3xl">
+            <p className="text-lg text-[#4A4A4A] leading-relaxed">
+              A deeper dive into the system's architecture, component patterns, and the rationale behind the technical decisions that shaped Sift's design platform.
+            </p>
+            <Link
+              to="/DesignSystemPresentation"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8E4] rounded-full text-sm font-medium text-[#4A4A4A] hover:border-[#1A1A1A] hover:text-[#1A1A1A] hover:scale-[1.02] active:scale-[0.98] transition-all w-fit"
+            >
+              View Presentation Guide
+            </Link>
+          </div>
         </CaseStudySection>
 
         <CaseStudyFooterNav

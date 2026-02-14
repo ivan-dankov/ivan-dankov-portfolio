@@ -3,6 +3,8 @@ import Footer from "../components/portfolio/Footer";
 import SocialLinks from "../components/portfolio/SocialLinks";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import ivanPhoto from "../assets/about/ivan.jpeg";
+import { ExternalLink } from "lucide-react";
 
 const toolGroups = [
   {
@@ -56,12 +58,12 @@ const toolGroups = [
 ];
 
 const experience = [
-  { company: "Sift", role: "Staff/Senior Product Designer", period: "2021–2025", duration: "4.5 years", desc: "Fraud detection, analytics, design system" },
-  { company: "Prjctr Design School", role: "Course Curator & Mentor", period: "2022–2023", duration: "1 year", desc: "Mentored ~60 designers" },
-  { company: "VistaCreate", role: "Senior Product Designer", period: "2019–2021", duration: "2 years", desc: "Full product redesign, design system" },
-  { company: "Nova Post", role: "Product Designer", period: "2018–2019", duration: "1.5 years", desc: "Omnichannel parcel tracking" },
-  { company: "Weblium", role: "UX Designer", period: "2017–2018", duration: "1 year", desc: "0-to-1 product redesign" },
-  { company: "Aimbulance", role: "UX Designer", period: "2015–2016", duration: "1.5 years", desc: "MasterCard, Unilever, PepsiCo" },
+  { company: "Sift", role: "Staff/Senior Product Designer", period: "2021–2025", duration: "4.5 years", desc: "Fraud detection, analytics, design system", url: "https://sift.com/" },
+  { company: "Prjctr Design School", role: "Course Curator & Mentor", period: "2022–2023", duration: "1 year", desc: "Mentored ~60 designers", url: "https://prjctr.com/" },
+  { company: "VistaCreate", role: "Senior Product Designer", period: "2019–2021", duration: "2 years", desc: "Full product redesign, design system", url: "https://create.vista.com/" },
+  { company: "Nova Post", role: "Product Designer", period: "2018–2019", duration: "1.5 years", desc: "Omnichannel parcel tracking", url: "https://novapost.com/" },
+  { company: "Weblium", role: "UX Designer", period: "2017–2018", duration: "1 year", desc: "0-to-1 product redesign", url: "https://weblium.com/" },
+  { company: "Aimbulance", role: "UX Designer", period: "2015–2016", duration: "1.5 years", desc: "MasterCard, Unilever, PepsiCo", url: "https://aimbulance.com/" },
 ];
 
 const testimonials = [
@@ -89,13 +91,13 @@ export default function About() {
           {/* Photo */}
           <div className="lg:col-span-4">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="w-full aspect-[4/5] md:aspect-square lg:aspect-[3/4] rounded-sm bg-[#E8E8E4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full aspect-[4/5] md:aspect-square lg:aspect-[3/4] rounded-sm bg-[#E8E8E4] overflow-hidden transition-all duration-500"
             >
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                src={ivanPhoto}
                 alt="Ivan Dankov"
                 className="w-full h-full object-cover"
               />
@@ -135,7 +137,7 @@ export default function About() {
               <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] mb-4">Focus</p>
               <div className="flex flex-wrap gap-2">
                 {["B2B SaaS", "Complex Systems", "Design Ops", "Prototyping"].map((tag) => (
-                  <Badge key={tag} variant="secondary" className="rounded-full px-3 py-1 font-normal text-[#4A4A4A] bg-[#F5F5F0] hover:bg-[#E8E8E4]">
+                  <Badge key={tag} variant="secondary" className="rounded-full px-4 py-2 font-medium text-[#6B6B6B] text-sm bg-white border border-[#E8E8E4] hover:border-[#1A1A1A] hover:text-[#1A1A1A] transition-all">
                     {tag}
                   </Badge>
                 ))}
@@ -162,7 +164,12 @@ export default function About() {
                 className="group grid grid-cols-1 md:grid-cols-12 gap-4 pb-12 border-b border-[#E8E8E4] last:border-0"
               >
                 <div className="md:col-span-4">
-                  <h3 className="text-xl font-medium text-[#1A1A1A] group-hover:text-[#006E75] transition-colors">{exp.company}</h3>
+                  <h3 className="text-xl font-medium text-[#1A1A1A] group-hover:text-[#006E75] transition-colors w-fit">
+                    <a href={exp.url} target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">
+                      {exp.company}
+                      <ExternalLink className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    </a>
+                  </h3>
                   <p className="text-sm text-[#6B6B6B] mt-1">{exp.period}</p>
                 </div>
                 <div className="md:col-span-8">
@@ -190,7 +197,7 @@ export default function About() {
                     {group.tools.map((tool, j) => (
                       <div
                         key={j}
-                        className="flex items-center gap-2 px-3 py-2 bg-[#F5F5F0] text-[#1A1A1A] text-sm rounded-md hover:bg-[#E8E8E4] transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-white text-[#6B6B6B] text-sm font-medium rounded-full border border-[#E8E8E4] hover:border-[#1A1A1A] hover:text-[#1A1A1A] transition-all"
                       >
                         {tool.svg ? (
                           <div
@@ -227,14 +234,14 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#F9F9F8] p-8 rounded-sm"
+                className="bg-white border border-[#E8E8E4] p-8 rounded-xl relative overflow-hidden"
               >
-                <p className="text-base text-[#1A1A1A] leading-relaxed mb-6">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-[1px] bg-[#6B6B6B]"></div>
-                  <p className="text-xs text-[#6B6B6B] font-medium uppercase tracking-wider">{t.source}</p>
+                <span className="absolute -top-2 -left-2 text-[8rem] text-[#E8E8E4] font-serif leading-none select-none pointer-events-none">“</span>
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <p className="text-xl md:text-2xl text-[#1A1A1A] font-serif italic mb-6 leading-relaxed">
+                    {t.quote}
+                  </p>
+                  <p className="text-xs text-[#6B6B6B] uppercase tracking-wider font-semibold">{t.source}</p>
                 </div>
               </motion.div>
             ))}

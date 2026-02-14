@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "phosphor-react";
 
 const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -16,6 +18,10 @@ export default function CaseStudyHero({ title, image, children }) {
         >
             <div className="lg:col-span-12 relative">
                 <div className="mb-8">
+                    <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors mb-6 group">
+                        <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                        Back to Home
+                    </Link>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.1] text-[#1A1A1A] max-w-5xl"
                         style={{ fontFamily: "var(--font-serif, 'DM Serif Display', Georgia, serif)" }}>
                         {title}

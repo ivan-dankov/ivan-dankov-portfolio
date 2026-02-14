@@ -23,7 +23,7 @@ export default function CaseCard({ page, image, title, metrics, context, hoverLa
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
           {/* Hover overlay with metric */}
           <div className={`absolute inset-0 bg-[#1A1A1A]/60 flex items-center justify-center transition-opacity duration-500 ${hovered ? "opacity-100" : "opacity-0"

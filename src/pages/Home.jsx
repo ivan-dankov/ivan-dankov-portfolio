@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import HeroImage from "../assets/design-system/hero/hero.webp";
+import ChargebackHero from "../assets/chargeback-workflows/Hero2.png";
+import Link2Img from "../assets/ato/Link 2.png";
 import CaseCard from "../components/portfolio/CaseCard";
 import LucentShowcase from "../components/portfolio/LucentShowcase";
 import Footer from "../components/portfolio/Footer";
@@ -57,17 +59,17 @@ export default function Home() {
           <div className="md:col-span-2">
             <CaseCard
               page="ChargebackWorkflows"
-              image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
-              title="Increasing agent throughput 140% by redesigning chargeback workflows"
+              image={ChargebackHero}
+              title="Increasing agent throughput 87.5% by redesigning chargeback workflows"
               metrics={[
-                { value: "50 to 120", label: "Cases per day" },
-                { value: "140%", label: "Throughput increase" },
-                { value: "Enterprise", label: "Alaska Airlines closed" }
+                { value: "87.5%", label: "Throughput increase" },
+                { value: "Deal closed", label: "With Alaska Airlines" },
+                { value: "0", label: "Silent errors" }
               ]}
               context={[
-                "Staff Product Designer", "Sift — B2B fraud platform", "4 months", "Sole designer"
+                "Staff Product Designer", "Sift", "4 months", "Sole designer"
               ]}
-              hoverLabel="+140% throughput"
+              hoverLabel="+87.5% throughput"
               large
             />
           </div>
@@ -75,15 +77,15 @@ export default function Home() {
           {/* Card 2 - ATO Revamp */}
           <CaseCard
             page="FraudInvestigation"
-            image="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80"
+            image={Link2Img}
             title="Redesigning fraud investigation UX — from research to working prototype"
             metrics={[
-              { value: "6", label: "Customer interviews" },
-              { value: "3/6", label: '"Game changer"' },
-              { value: "Adopted", label: "Into engineering roadmap" }
+              { value: "6", label: "Customers interviewed" },
+              { value: "3 of 6", label: '"Game changer" rating' },
+              { value: "Validated", label: "Adopted into roadmap" }
             ]}
             context={[
-              "Staff Product Designer", "Sift — B2B fraud platform", "8 weeks", "Discovery to validated prototype"
+              "Staff Product Designer", "Sift", "8 weeks", "Discovery to Prototype"
             ]}
             hoverLabel={'"Game changer" — 3 of 6 customers'}
           />
@@ -94,12 +96,12 @@ export default function Home() {
             image={HeroImage}
             title="Scaling product delivery across 5 teams with a shared design platform"
             metrics={[
-              { value: "Console 2.0", label: "Shipped on system" },
+              { value: "100%", label: "Unified language" },
               { value: "3×", label: "Less UI bugs" },
-              { value: "<5wk", label: "Figma migration" }
+              { value: "<5 weeks", label: "Figma migration" }
             ]}
             context={[
-              "Staff Product Designer", "Sift", "Co-led with 1 designer", "4+ years"
+              "Staff Product Designer", "Sift", "4+ years", "Co-led with 1 engineer"
             ]}
             hoverLabel="3 products, 1 system"
           />

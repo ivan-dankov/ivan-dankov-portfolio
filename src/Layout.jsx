@@ -25,7 +25,7 @@ export default function Layout({ children, currentPageName }) {
   return (
     <div className="min-h-screen bg-[#F5F5F0] text-[#1A1A1A] font-sans antialiased">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
         :root {
           --font-sans: 'Inter', system-ui, sans-serif;
           --font-serif: 'Fraunces', Georgia, serif;
@@ -43,64 +43,66 @@ export default function Layout({ children, currentPageName }) {
 
 
       {/* Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#F5F5F0]/90 backdrop-blur-md border-b border-[#E8E8E4]" : "bg-transparent"
-        }`}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-          <Link
-            to={createPageUrl("Home")}
-            className="flex items-center gap-2 hover:opacity-60 transition-opacity"
-          >
-            <span className="text-sm font-medium tracking-tight">Ivan Dankov</span>
-            <span className="text-sm text-[#6B6B6B]">Warsaw, Poland</span>
-          </Link>
-
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.page}
-                to={createPageUrl(link.page)}
-                className={`text-sm transition-opacity hover:opacity-60 ${currentPageName === link.page ? "font-medium" : "text-[#6B6B6B]"
-                  }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="mailto:ivandankovdigital@gmail.com"
-              className="text-sm text-[#6B6B6B] hover:opacity-60 transition-opacity"
+      {currentPageName !== 'DesignSystemPresentation' && (
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#F5F5F0]/90 backdrop-blur-md border-b border-[#E8E8E4]" : "bg-transparent"
+          }`}>
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
+            <Link
+              to={createPageUrl("Home")}
+              className="flex items-center gap-2 hover:opacity-60 transition-opacity"
             >
-              Contact
-            </a>
-          </div>
+              <span className="text-sm font-medium tracking-tight">Ivan Dankov</span>
+              <span className="text-sm text-[#6B6B6B]">Warsaw, Poland</span>
+            </Link>
 
-          {/* Mobile menu toggle */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 -mr-2"
-          >
-            {menuOpen ? <X size={20} /> : <List size={20} />}
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-[#F5F5F0] border-b border-[#E8E8E4] px-6 py-6 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.page}
-                to={createPageUrl(link.page)}
-                className="block text-lg font-medium"
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.page}
+                  to={createPageUrl(link.page)}
+                  className={`text-sm transition-opacity hover:opacity-60 ${currentPageName === link.page ? "font-medium" : "text-[#6B6B6B]"
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <a
+                href="mailto:ivandankovdigital@gmail.com"
+                className="text-sm text-[#6B6B6B] hover:opacity-60 transition-opacity"
               >
-                {link.label}
-              </Link>
-            ))}
-            <a href="mailto:ivandankovdigital@gmail.com" className="block text-lg text-[#6B6B6B]">
-              Contact
-            </a>
+                Contact
+              </a>
+            </div>
+
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden p-2 -mr-2"
+            >
+              {menuOpen ? <X size={20} /> : <List size={20} />}
+            </button>
           </div>
-        )}
-      </nav>
+
+          {/* Mobile menu */}
+          {menuOpen && (
+            <div className="md:hidden bg-[#F5F5F0] border-b border-[#E8E8E4] px-6 py-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.page}
+                  to={createPageUrl(link.page)}
+                  className="block text-lg font-medium"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <a href="mailto:ivandankovdigital@gmail.com" className="block text-lg text-[#6B6B6B]">
+                Contact
+              </a>
+            </div>
+          )}
+        </nav>
+      )}
 
       <main>{children}</main>
     </div>
