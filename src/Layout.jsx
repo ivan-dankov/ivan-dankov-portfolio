@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "./utils";
 import { useState, useEffect } from "react";
 import { List, X } from "phosphor-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Layout({ children, currentPageName }) {
   const [scrolled, setScrolled] = useState(false);
@@ -105,6 +106,7 @@ export default function Layout({ children, currentPageName }) {
       )}
 
       <main>{children}</main>
+      <Analytics />
     </div>
   );
 }
